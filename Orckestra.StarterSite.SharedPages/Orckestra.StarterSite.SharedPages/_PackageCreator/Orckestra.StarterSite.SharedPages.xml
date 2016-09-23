@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:Excludes>
+		<Add name="4c7a5165-0357-4931-b3d0-d33ca8545541" type="page">
+		</Add>
+		<Add name="9ace435a-7970-40f7-8ca7-b6f5607fa589" type="page">
+		</Add>
+		<Add name="20d14662-e83e-4ee1-bbc9-afd9b2f88f34" type="page">
+		</Add>
+	</pc:Excludes>
+	<pc:PageTrees>
+		<Add name="3a613405-9990-47a6-8f00-672a8e6de9e7" root="false" data="true" />
+		<Add name="f90418c7-9654-4226-81c1-3b4e959f4f39" root="false" data="true" />
+	</pc:PageTrees>
+	<mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.SharedPages" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="6f078485-f7c3-40b2-8960-b075ccfaaaa3" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>Shared pages used on starter sites.
+Example: About Us, Getting started.</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>

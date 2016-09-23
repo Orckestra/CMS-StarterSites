@@ -1,0 +1,14 @@
+
+.vs
+bin
+
+packages
+*/*/obj/Debug
+*/*/obj/Release
+*/*/*/obj/Debug
+*/*/*/obj/Release
+
+
+*.suo
+*.csproj.user
+*.zip

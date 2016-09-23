@@ -1,0 +1,58 @@
+﻿@brand-primary:         #00BA90;
+
+@body-bg:               #fff;
+
+@text-color:            #696f6f;
+
+@link-color:            @brand-primary;
+
+@font-size-base:          16px;
+
+@line-height-base:        1.8;
+
+@headings-font-weight:    bold;
+
+@headings-color:          @gray-darker;
+
+@icon-font-path:          "../../fonts/";
+
+@padding-base-vertical:     12px;
+@padding-base-horizontal:   12px;
+
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
+
+
+
+// Buttons
+@btn-font-weight:                bold;
+
+@btn-default-color:              rgb(158, 158, 158);
+@btn-default-bg:                 rgb(235, 235, 235);
+@btn-default-border:             @btn-default-bg;
+
+
+
+@dropdown-link-hover-color:      @brand-primary;
+@dropdown-link-hover-bg:         transparent;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @brand-primary;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        #fff;
+
+@navbar-height:                    95px;
+@navbar-default-color:             #777;
+@navbar-default-bg:                #fff;
+@navbar-default-link-color:                @gray-darker;
+@navbar-default-link-hover-color:          @brand-primary;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         @brand-primary;
+@navbar-default-link-active-bg:            transparent;
+
+
+@nav-link-hover-bg:                        transparent;
+@nav-disabled-link-hover-color:              @brand-primary;
+
+@grid-float-breakpoint:     @screen-md-min;

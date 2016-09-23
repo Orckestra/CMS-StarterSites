@@ -1,0 +1,27 @@
+﻿.profiles-list {
+    h3 {
+        font-size: 0.9em;
+    }
+
+    h3 + p {
+        margin: 0 0 2em 0;
+    }
+
+    h3 + p + p {
+        color: @gray-darker;
+        font-size: 0.9em;
+        line-height: 1.4;
+        font-weight: bold;
+        display: block;
+        overflow: hidden;
+    }
+}
+
+
+@media (min-width: @screen-sm-min) {
+    .profiles-list {
+         h3 + p {
+            height: 60px;
+        }
+    }
+}

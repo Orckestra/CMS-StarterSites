@@ -1,0 +1,53 @@
+﻿a:hover, a:active, a:focus {
+    outline: none !important; // for IE
+}
+
+//offsetting the html anchor to adjust for fixed navbar
+.anchor:before {
+    content: '';
+    width: 0;
+    height: @navbar-height + 20;
+    display: block;
+    position: relative;
+    margin-top: -(@navbar-height + 20);
+}
+
+/* In FireFox  abbr tag shows dotted underline  */
+abbr[title] {
+  text-decoration: none;
+}
+
+//override bootstrap badges
+.badge {
+    border: solid 1px @gray-lighter;
+}
+
+// Columns
+@media (min-width: @screen-sm-min) {
+
+    .three-columns, .two-columns {
+        margin: 25px 0 65px 0;
+    }
+
+    .three-columns {
+        .content-columns(3);
+
+        div:nth-child(3n+1) {
+            clear: both;
+        }
+    }
+
+    .frontpage {
+        .three-columns {
+            .content-columns(3, 120px);
+        }
+    }
+
+    .two-columns {
+        .content-columns(2);
+
+        div:nth-child(2n+1) {
+            clear: both;
+        }
+    }
+}

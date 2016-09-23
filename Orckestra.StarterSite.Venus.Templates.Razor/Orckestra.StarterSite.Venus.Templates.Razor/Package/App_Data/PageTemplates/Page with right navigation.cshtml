@@ -1,0 +1,39 @@
+﻿@inherits RazorPageTemplate
+@functions {
+    public override void Configure()
+    {
+        TemplateId = new Guid("23651f7a-3f4b-4eda-9708-07c3b602050d");
+        TemplateTitle = "Page with right navigation";
+        Layout = "MasterLayout.cshtml";
+    }
+
+    [Placeholder(Id = "start", Title = "Content Start")]
+    public XhtmlDocument Start { get; set; }
+
+    [Placeholder(Id = "content", IsDefault = true)]
+    public XhtmlDocument Content { get; set; }
+
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    @*you can add template specific head elements here*@
+</head>
+    <body class="contentpage-with-nav">
+        @this.Function("Layout.Helpers.InjectContainerElements",
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 content-column">
+                    @Markup(Content)
+                </div>
+				 <div class="col-md-3 col-md-offset-1">
+                    <div class="sidebar">
+                        <div class="nav-sidebar hidden-print visible-lg visible-md visible-sm">
+                            @PageTemplateFeature("Navigation Column")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
