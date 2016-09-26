@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
-	<mi:PackageRequirements minimumCompositeVersion="5.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
 	<mi:PackageInformation name="Orckestra.Media.ImageGallery.Slimbox2.DefaultContent" groupName="Orckestra.Media.ImageGallery.Slimbox2" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com/Add-on-Market/Packages/Composite.Media.ImageGallery.Slimbox2" id="3237ff22-6caf-4557-8525-1d6822e3529b" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
