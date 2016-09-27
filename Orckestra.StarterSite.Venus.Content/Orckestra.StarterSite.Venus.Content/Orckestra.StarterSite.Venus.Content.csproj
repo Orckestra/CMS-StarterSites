@@ -75,7 +75,9 @@
     <Content Include="Package\Datas\Composite.Data.Types.IPages_administrated.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Package\Datas\Composite.Data.Types.IPages_public.xml" />
+    <Content Include="Package\Datas\Composite.Data.Types.IPages_public.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Package\install.xml">
       <SubType>Designer</SubType>
     </Content>
