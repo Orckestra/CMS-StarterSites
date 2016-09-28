@@ -1,0 +1,100 @@
+﻿@inherits RazorFunction
+@using Layout.Navigation;
+@functions {
+    override public string FunctionDescription
+    {
+        get { return "A function that displays a main menu"; }
+    }
+
+    [FunctionParameter(Label = "Show Home Page", DefaultValue = true)]
+    public bool ShowHomePage { get; set; }
+
+    private IEnumerable<PageNode> OpenPages(PageNode selectedPageNode)
+    {
+        var openPages = new List<PageNode>();
+        var openPage = selectedPageNode;
+
+        while (openPage != null)
+        {
+            openPages.Add(openPage);
+            openPage = openPage.ParentPage; // crawl up
+        }
+
+        return openPages;
+    }
+}
+
+@{
+    var pagenodes = Sitemap.CurrentHomePageNode.GetPageNodes(SitemapScope.Level2AndSiblings).ToList();
+    if (!pagenodes.Any()) { return; }
+
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+    <ul class="nav navbar-nav navbar-right">
+        @if (ShowHomePage)
+        {
+            <li>
+                <a href="@HomePageNode.Url">@HomePageNode.MenuTitle</a>
+            </li>
+        }
+        @for (var i = 0; i < pagenodes.Count; i++)
+        {
+
+            var page = pagenodes[i];
+            if (string.IsNullOrEmpty(page.MenuTitle))
+            {
+                continue;
+            }
+
+            var isDropDown = page.ChildPages.Any(cp => !string.IsNullOrEmpty(cp.MenuTitle));
+            var isActive = page.Id == CurrentPageNode.Id;
+            var isOpen = OpenPages(CurrentPageNode).Any(op => op.Id == page.Id);
+
+            <li class="@(isDropDown ? "dropdown" : string.Empty) @(isActive || isOpen ? " active" : string.Empty)">
+                <a href="@page.Url" class="@(isActive ? "active" : string.Empty) @(isDropDown ? " dropdown-toggle" : string.Empty)" data-toggle="@(isDropDown ? "dropdown" : null)">
+                    @page.MenuTitle
+                </a>
+                @if (isDropDown)
+                {
+                    @NavigationTree(page, 3)
+                }
+            </li>
+        }
+    </ul>
+</body>
+</html>
+
+@helper NavigationTree(PageNode parentPage, int maxLevel)
+{
+    var pages = parentPage.ChildPages;
+    var pageLevel = parentPage.Level;
+
+    <ul class="dropdown-menu">
+        @if (pages.Any())
+        {
+
+            foreach (var subPage in pages)
+            {
+                if (!String.IsNullOrWhiteSpace(subPage.MenuTitle))
+                {
+                    var isOpen = OpenPages(@CurrentPageNode).Any(op => op.Id == subPage.Id);
+                    var isSelected = @CurrentPageNode.Id == subPage.Id;
+                    var isDropDown = subPage.ChildPages.Any(p => !string.IsNullOrEmpty(p.MenuTitle));
+
+                    <li class="@(isSelected || isOpen ? " active" : string.Empty) @(isDropDown ? "dropdown" : string.Empty) ">
+                        <a href="@(subPage.Url)" class="@(isDropDown ? " dropdown-toggle" : string.Empty)" data-toggle="@(isDropDown ? "dropdown" : null)">@subPage.MenuTitle</a>
+                        @if (pageLevel < maxLevel)
+                        {
+                            @NavigationTree(subPage, maxLevel)
+                            ;
+                        }
+                    </li>
+                }
+            }
+        }
+    </ul>
+}

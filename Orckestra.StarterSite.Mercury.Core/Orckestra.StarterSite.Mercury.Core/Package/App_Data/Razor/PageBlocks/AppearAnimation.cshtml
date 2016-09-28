@@ -1,0 +1,47 @@
+﻿@using System.Web.UI.WebControls
+@using Composite.Core.WebClient.Renderings.Page
+@inherits RazorFunction
+
+@functions {
+
+    public override string FunctionDescription
+    {
+        get { return "Appear Animation Effect"; }
+    }
+
+    [FunctionParameter(Label = "Content")]
+    public XhtmlDocument Content { get; set; }
+
+    private const string optionsWidgetMarkup = @" <f:widgetfunction xmlns:f='http://www.composite.net/ns/function/1.0' name='Composite.Widgets.String.Selector'>
+	  <f:param name='Options'>
+	   <f:function name='Composite.Utils.String.Split'>
+		<f:param name='String' value='fadeIn,fadeInLeft,fadeInRight,fadeInUp,fadeInDown,swing,pulse,bounce,zoomIn' />
+	   </f:function>
+	  </f:param>
+	 </f:widgetfunction>";
+
+    [FunctionParameter(Label = "Animation Effect", Help = "Fade effect by default", WidgetMarkup = optionsWidgetMarkup, DefaultValue = "fadeIn")]
+    public string Effect { get; set; }
+
+    [FunctionParameter(Label = "Effect Delay", DefaultValue = "300")]
+    public int EffectDelay { get; set; }
+
+}
+
+@{
+    if (PageRenderer.RenderingReason == RenderingReason.ScreenshotGeneration)
+    {
+        @Html.Raw(Content)
+        return;
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <div class="object-non-visible" data-animation-effect="@(Effect)" data-effect-delay="@(EffectDelay)">
+        @Html.Raw(Content)
+    </div>
+</body>
+</html>

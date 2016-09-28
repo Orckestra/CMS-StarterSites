@@ -1,0 +1,57 @@
+﻿@using Composite.Core.WebClient.Renderings.Page
+@inherits RazorFunction
+
+@functions {
+
+    public override string FunctionDescription
+    {
+        get { return "Animated Slide Content Item"; }
+    }
+
+    [FunctionParameter(Label = "Content")]
+    public XhtmlDocument Content { get; set; }
+
+    private const string apearWidgetMarkup = @" <f:widgetfunction xmlns:f='http://www.composite.net/ns/function/1.0' name='Composite.Widgets.String.Selector'>
+	  <f:param name='Options'>
+	   <f:function name='Composite.Utils.String.Split'>
+		<f:param name='String' value='fadeIn,fadeInLeft,fadeInRight,fadeInUp,fadeInDown,swing,pulse,bounce,zoomIn' />
+	   </f:function>
+	  </f:param>
+	 </f:widgetfunction>";
+
+    [FunctionParameter(Label = "Appear Animation Effect", Help = "fadeInLeft effect by default", WidgetMarkup = apearWidgetMarkup, DefaultValue = "fadeInLeft")]
+    public string AppearEffect { get; set; }
+
+    private const string disappearWidgetMarkup = @" <f:widgetfunction xmlns:f='http://www.composite.net/ns/function/1.0' name='Composite.Widgets.String.Selector'>
+	  <f:param name='Options'>
+	   <f:function name='Composite.Utils.String.Split'>
+		<f:param name='String' value='fadeOut,fadeOutLeft,fadeOutRight,fadeOutUp,fadeOutDown' />
+	   </f:function>
+	  </f:param>
+	 </f:widgetfunction>";
+
+    [FunctionParameter(Label = "Disappear Animation Effect", Help = "fadeOutLeft effect by default", WidgetMarkup = disappearWidgetMarkup, DefaultValue = "fadeOutLeft")]
+    public string DisappearEffect { get; set; }
+
+    [FunctionParameter(Label = "Effect Delay", DefaultValue = "300")]
+    public int EffectDelay { get; set; }
+
+}
+
+@{
+    if (PageRenderer.RenderingReason == RenderingReason.ScreenshotGeneration)
+    {
+        @Html.Raw(Content)
+        return;
+    }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <div class="object-non-visible" data-appear-effect="@(AppearEffect)" data-disappear-effect="@(DisappearEffect)" data-effect-delay="@(EffectDelay)">
+        @Html.Raw(Content)
+    </div>
+</body>
+</html>

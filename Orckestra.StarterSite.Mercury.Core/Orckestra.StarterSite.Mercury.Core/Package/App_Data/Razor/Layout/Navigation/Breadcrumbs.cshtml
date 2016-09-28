@@ -1,0 +1,85 @@
+﻿@using Composite.Core.Routing.Pages
+@inherits RazorFunction
+
+@functions {
+	override public string FunctionDescription
+	{
+		get { return "A function that displays a breadcrumbs menu"; }
+	}
+
+	private IEnumerable<PageNode> OpenPages(PageNode selectedPageNode)
+	{
+		var openPages = new List<PageNode>();
+		var openPage = selectedPageNode;
+
+		while (openPage != null)
+		{
+			openPages.Add(openPage);
+			openPage = openPage.ParentPage; // crawl up
+		}
+
+		return openPages;
+	}
+}
+@{
+	var openpages = OpenPages(CurrentPageNode).ToList();
+	if (CurrentPageNode.Level == 1)
+	{
+		return;
+	}
+	var pathInfo = C1PageRoute.GetPathInfo();
+	if (pathInfo != null)
+	{
+		pathInfo = pathInfo.Substring(1);
+	}
+}
+<div class="page-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ol class="breadcrumb">
+					<li>
+						<i class="fa fa-home pr-10"></i>
+						<a href="/">@HomePageNode.MenuTitle</a>
+					</li>
+					@for (var i = (openpages.Count() - 1); i >= 0; i--)
+					{
+						var page = openpages[i];
+						var isActive = page.Id == CurrentPageNode.Id;
+						var title = !string.IsNullOrEmpty(page.MenuTitle) ? page.MenuTitle : page.Title;
+						if (page.Level == 1)
+						{
+							continue;
+						}
+						if (!isActive)
+						{
+							<li>
+								<span><a href="@page.Url">@title</a></span>
+							</li>
+						}
+						else
+						{
+							if (!string.IsNullOrEmpty(pathInfo))
+							{
+
+								<li>
+									<span><a href="@page.Url">@title</a></span>
+								</li>
+								<li>
+									<span class="active">@pathInfo</span>
+								</li>
+							}
+							else
+							{
+								<li>
+									<span class="active">@title</span>
+								</li>
+							}
+
+						}
+					}
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>

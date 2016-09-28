@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Add Title="Portfolio" Description="&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xA;&#x9;&lt;head&gt;&lt;/head&gt;&#xA;&#x9;&lt;body&gt;&#xA;&#xA;&lt;p class=&quot;page-title lead&quot;&gt;Show your portfolio here. As an example, we are listing a few featured CMS&amp;#160;add-ons.&amp;#160;&lt;br /&gt;&lt;/p&gt;&#xA;&#xA;&#x9;&lt;/body&gt;&#xA;&lt;/html&gt;" BackgroundImage="MediaArchive:038441ad-4b72-4da6-9bb6-e39edd4ed013" BgOverlay="light" SourceCultureName="en-US" FieldName="Page Banner" Id="0acb5703-cf8f-40fb-8aee-bf477f16a0db" PageId="08442952-38dd-4aa8-ad9e-99652fc39f43" PublicationStatus="published" />
+  <Add Description="&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;  &lt;head /&gt;&#xD;&#xA;  &lt;body /&gt;&#xD;&#xA;&lt;/html&gt;" BgOverlay="dark" SourceCultureName="en-US" FieldName="Page Banner" Id="9edc3b90-8534-4f6d-9d16-d97e9589ab2e" PageId="9ace435a-7970-40f7-8ca7-b6f5607fa589" PublicationStatus="published" />
+</Data>

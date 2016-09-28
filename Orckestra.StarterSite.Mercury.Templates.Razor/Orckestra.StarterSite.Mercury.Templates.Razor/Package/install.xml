@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
+	<mi:PackageRequirements minimumCompositeVersion="4.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.Mercury.Templates.Razor" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="635d3b31-a0c4-4f32-9368-0c2b7a010d8c" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>Razor Based Templates</Description>
+	</mi:PackageInformation>
+	<mi:PackageFragmentInstallerBinaries />
+	<mi:PackageFragmentInstallers>
+		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.FilePackageFragmentUninstaller, Composite">
+			<Files>
+				<File sourceFilename="~\App_Data\PageTemplates\Frontpage.cshtml" targetFilename="~\App_Data\PageTemplates\Frontpage.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\MasterLayout.cshtml" targetFilename="~\App_Data\PageTemplates\MasterLayout.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page with left aside.cshtml" targetFilename="~\App_Data\PageTemplates\Page with left aside.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page with left navigation.cshtml" targetFilename="~\App_Data\PageTemplates\Page with left navigation.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page with navigation and right aside.cshtml" targetFilename="~\App_Data\PageTemplates\Page with navigation and right aside.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page with right aside.cshtml" targetFilename="~\App_Data\PageTemplates\Page with right aside.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page with right navigation.cshtml" targetFilename="~\App_Data\PageTemplates\Page with right navigation.cshtml" allowOverwrite="false" />
+				<File sourceFilename="~\App_Data\PageTemplates\Page.cshtml" targetFilename="~\App_Data\PageTemplates\Page.cshtml" allowOverwrite="false" />
+			</Files>
+		</mi:Add>
+	</mi:PackageFragmentInstallers>
+</mi:PackageInstaller>

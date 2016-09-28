@@ -1,0 +1,34 @@
+﻿@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Iconified Simple Text"; }
+    }
+
+    private const string iconWidget = @"
+    <f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.FontIconSelector"">
+		<f:param name=""ClassNameOptions"">
+			<f:function name=""Widgets.FontIconSelector.GetIconsNames"" />
+		</f:param>
+		<f:param name=""StylesheetPath"" value=""~/Frontend/Styles/font-awesome/font-awesome.css"" />
+		<f:param name=""ClassNamePrefix"" value=""fa fa-"" />
+	</f:widgetfunction>";
+
+    [FunctionParameter(Label = "Icon", Help = "The icon to show before the text", DefaultValue = null, WidgetMarkup = iconWidget)]
+    public string Icon { get; set; }
+
+    [FunctionParameter(Label = "Text", Help = "The text to show after the icon.", DefaultValue = null)]
+    public string Text { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <p>
+        <i class="pr-5 fa fa-@Icon"></i>
+        @Text
+    </p>
+</body>
+</html>

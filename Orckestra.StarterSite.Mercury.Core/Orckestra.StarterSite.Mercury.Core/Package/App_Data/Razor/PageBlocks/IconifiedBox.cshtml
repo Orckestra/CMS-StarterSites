@@ -1,0 +1,50 @@
+﻿@using System.Web.UI.WebControls
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Iconified Content Box"; }
+    }
+
+    private const string iconWidget = @"
+    <f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.FontIconSelector"">
+		<f:param name=""ClassNameOptions"">
+			<f:function name=""Widgets.FontIconSelector.GetIconsNames"" />
+		</f:param>
+		<f:param name=""StylesheetPath"" value=""~/Frontend/Styles/font-awesome/font-awesome.css"" />
+		<f:param name=""ClassNamePrefix"" value=""fa fa-"" />
+	</f:widgetfunction>";
+
+    [FunctionParameter(Label = "Icon", WidgetMarkup = iconWidget)]
+    public string Icon { get; set; }
+
+    [FunctionParameter(Label = "Title")]
+    public string Title { get; set; }
+
+    [FunctionParameter(Label = "Description")]
+    public XhtmlDocument Description { get; set; }
+
+    [FunctionParameter(Label = "Read More Url", DefaultValue = null, WidgetFunctionName = "Composite.Widgets.String.UrlComboBox")]
+    public string ReadMoreUrl { get; set; }
+
+    [FunctionParameter(Label = "Read More Text", DefaultValue = "Read More")]
+    public string ReadMoreText { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <div class="iconified-box appear">
+        <i class="fa fa-@Icon"></i>
+        <h2>@Title</h2>
+        @Html.Raw(Description)
+		 @if (!string.IsNullOrWhiteSpace(ReadMoreUrl))
+            {
+                   <a href="@ReadMoreUrl" class="btn-default btn">@ReadMoreText</a>
+            }
+     
+    </div>
+</body>
+</html>

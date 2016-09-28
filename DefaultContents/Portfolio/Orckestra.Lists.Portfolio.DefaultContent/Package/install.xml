@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
+	<mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.Lists.Portfolio.DefaultContent" groupName="Orckestra.Lists" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="-" id="03ac4c69-f336-4321-bd52-a0b38db6aaf0" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>-</Description>
+	</mi:PackageInformation>
+	<mi:PackageFragmentInstallerBinaries />
+	<mi:PackageFragmentInstallers>
+		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentUninstaller, Composite">
+			<Types>
+				<Type type="Composite.Data.Types.IPageStructure,Composite">
+					<Data dataScopeIdentifier="public" dataFilename="~\Datas\Composite.Data.Types.IPageStructures_public.xml" />
+				</Type>
+				<Type type="Orckestra.Lists.PortfolioCategory">
+					<Data dataScopeIdentifier="public" dataFilename="~\Datas\Orckestra.Lists.PortfolioCategorys_public.xml" />
+				</Type>
+				<Type type="Composite.Data.Types.IPage,Composite">
+					<Data dataScopeIdentifier="administrated" locale="?" dataFilename="~\Datas\Composite.Data.Types.IPages_administrated.xml" />
+				</Type>
+				<Type type="Composite.Data.Types.IPage,Composite">
+					<Data dataScopeIdentifier="public" locale="?" dataFilename="~\Datas\Composite.Data.Types.IPages_public.xml" />
+				</Type>
+				<Type type="Composite.Data.Types.IPagePlaceholderContent,Composite">
+					<Data dataScopeIdentifier="administrated" locale="?" dataFilename="~\Datas\Composite.Data.Types.IPagePlaceholderContents_administrated.xml" />
+				</Type>
+				<Type type="Composite.Data.Types.IPagePlaceholderContent,Composite">
+					<Data dataScopeIdentifier="public" locale="?" dataFilename="~\Datas\Composite.Data.Types.IPagePlaceholderContents_public.xml" />
+				</Type>
+				<Type type="Orckestra.Lists.PortfolioProject">
+					<Data dataScopeIdentifier="administrated" locale="?" dataFilename="~\Datas\Orckestra.Lists.PortfolioProjects_administrated.xml" />
+				</Type>
+				<Type type="Orckestra.Lists.PortfolioProject">
+					<Data dataScopeIdentifier="public" locale="?" dataFilename="~\Datas\Orckestra.Lists.PortfolioProjects_public.xml" />
+				</Type>
+				<Type type="Composite.Data.Types.IDataItemTreeAttachmentPoint,Composite">
+					<Data dataScopeIdentifier="public" dataFilename="~\Datas\Composite.Data.Types.IDataItemTreeAttachmentPoints_public.xml" />
+				</Type>
+			</Types>
+		</mi:Add>
+	</mi:PackageFragmentInstallers>
+</mi:PackageInstaller>

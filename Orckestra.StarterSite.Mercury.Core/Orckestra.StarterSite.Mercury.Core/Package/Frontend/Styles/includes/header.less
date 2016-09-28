@@ -1,0 +1,82 @@
+﻿.header-top {
+    background-color: @header-top-bg;
+    border-bottom: 1px solid @header-top-border-color;
+    -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.03) inset;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.03) inset;
+    font-size: @header-top-font-size;
+    height: @header-top-height;
+    line-height: @header-top-height;
+    vertical-align: middle;
+
+    .social-il {
+        margin: 0;
+
+        li {
+            border-left: 1px solid @header-top-border-color;
+            margin: 0;
+
+            &:hover {
+                background-color: #fafafa;
+            }
+
+            &:last-child {
+                border-right: 1px solid @header-top-border-color;
+            }
+
+            a {
+                font-size: @header-top-font-size;
+                border: none !important;
+                background-color: transparent !important;
+                border-color: transparent;
+
+                &:hover {
+                    color: @brand-primary;
+                    background: transparent;
+                    border: none;
+                }
+
+                i {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .social-il-dropdown {
+        .btn {
+            background: transparent;
+            border: none;
+        }
+
+        .dropdown-menu {
+            min-width: 100%;
+
+            li {
+                width: 100%;
+                text-align: center;
+                border: 0;
+            }
+
+            a {
+                width: auto;
+            }
+        }
+    }
+}
+
+.logo {
+    img {
+        display: inline-block;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+.logo-slogan {
+    color: @logo-slogan-color;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 10px;
+}

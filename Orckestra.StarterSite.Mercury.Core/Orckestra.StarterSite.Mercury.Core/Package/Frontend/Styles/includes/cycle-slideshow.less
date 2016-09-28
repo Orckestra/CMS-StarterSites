@@ -1,0 +1,42 @@
+﻿/* pager */
+.cycle-pager {
+    text-align: center;
+    width: 100%;
+    z-index: 500;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+    .cycle-pager span {
+        font-family: Arial;
+        font-size: 50px;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        display: inline-block;
+        color: @gray-lighter;
+    }
+
+        .cycle-pager span.cycle-pager-active {
+            color: @brand-primary;
+        }
+
+    .cycle-pager > * {
+        cursor: pointer;
+    }
+
+.cycle-prev, .cycle-next {
+    font-size: 34px;
+    position: absolute;
+    z-index: 1000;
+    top: 45%;
+}
+
+.cycle-prev {
+    left: 2px;
+}
+
+.cycle-next {
+    right: 2px;
+}

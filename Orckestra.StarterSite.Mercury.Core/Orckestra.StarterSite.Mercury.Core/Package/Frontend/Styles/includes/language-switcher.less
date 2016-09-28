@@ -1,0 +1,47 @@
+﻿.language-switcher {
+
+    &.format-NativeName a {
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &.format-TwoLetterISOLanguageName a {
+        text-transform: uppercase;
+    }
+
+    &.style-inline {
+
+        > ul > li {
+            padding: 0;
+            margin: 0;
+            > a {
+                color: @service-menu-link-color;
+                display: block;
+                position: relative;
+                padding: 0 6px;
+
+                &:after {
+                    content: '/';
+                    display: block;
+                    position: absolute;
+                    right: -4px;
+                    top: 0;
+                    color: @service-menu-link-color !important;
+                }
+            }
+
+            &:last-child {
+                > a:after {
+                    content: '';
+                }
+            }
+
+            &.active {
+                > a {
+                    color: @brand-primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+﻿html {
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+        outline: none !important; // for IE
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-tabs > li {
+    &.active i, > a:hover i {
+        color: @brand-primary !important;
+    }
+}
+
+
+/* In FireFox  abbr tag shows dotted underline  */
+abbr[title] {
+  text-decoration: none;
+}

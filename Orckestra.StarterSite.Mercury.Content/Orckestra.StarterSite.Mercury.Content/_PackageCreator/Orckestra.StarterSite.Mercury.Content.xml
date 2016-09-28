@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:Files>
+		<Add name="Frontend\Images\logo.png" />
+	</pc:Files>
+	<pc:Content />
+	<pc:Excludes>
+		<Add name="20d14662-e83e-4ee1-bbc9-afd9b2f88f34" type="page">
+		</Add>
+		<Add name="fec78884-8f7a-4f4d-b9b7-eb0c9654c378" type="page">
+		</Add>
+		<Add name="51aef503-816d-469f-9a54-cfb8b0033628" type="page">
+		</Add>
+		<Add name="dfb6e1ac-ea0d-4c50-b8b7-bb6046fd3a11" type="page">
+		</Add>
+	</pc:Excludes>
+	<pc:PageTrees>
+		<Add name="a3055286-0e90-4b04-99dd-fb1a61dde0bf" root="false" data="true" />
+	</pc:PageTrees>
+	<mi:PackageRequirements minimumCompositeVersion="4.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.Mercury.Content" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="0c532d79-673a-4557-ba84-c01b05895b47" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>-</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>

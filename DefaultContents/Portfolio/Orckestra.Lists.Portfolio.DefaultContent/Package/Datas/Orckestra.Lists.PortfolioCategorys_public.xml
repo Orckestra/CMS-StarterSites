@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Add Id="3d27313b-cd89-4846-a639-b3b547c4323d" Title="Tools" Ordering="3" />
+  <Add Id="b0e67e2c-faee-448f-b0e7-b14dacc59e6d" Title="Social" Ordering="0" />
+  <Add Id="df7fa8e9-8ab3-428b-9cb3-326bd51168cc" Title="Forms" Ordering="1" />
+</Data>

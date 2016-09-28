@@ -1,0 +1,29 @@
+﻿@inherits RazorPageTemplate
+
+@functions {
+	public override void Configure()
+	{
+		TemplateId = new Guid("0526ad34-c540-418e-8c23-0eec2a8da2ce");
+		TemplateTitle = "Page";
+		Layout = "MasterLayout.cshtml";
+	}
+
+	[Placeholder(Id = "start", Title = "Page Start")]
+	public XhtmlDocument Start { get; set; }
+
+	[Placeholder(Id = "content", Title = "Content", IsDefault = true)]
+	public XhtmlDocument Content { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body class="page">
+	@this.Function("Layout.Helpers.InjectContainerElements",
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+
+	<f:function name="Layout.Navigation.Breadcrumbs" xmlns:f="http://www.composite.net/ns/function/1.0" />
+
+	@this.Function("Layout.Helpers.InjectContainerElements", new { Document = Content, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+</body>
+</html>

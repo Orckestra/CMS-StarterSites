@@ -1,0 +1,42 @@
+﻿@inherits RazorFunction
+
+@functions {
+
+    public override string FunctionDescription
+    {
+        get { return "Styled page block with/without animation effect"; }
+    }
+
+    [FunctionParameter(Label = "Title")]
+    public string Title { get; set; }
+
+    [FunctionParameter(Label = "Description")]
+    public XhtmlDocument Description { get; set; }
+
+    [FunctionParameter(Label = "Image")]
+    public DataReference<IImageFile> Image { get; set; }
+
+    [FunctionParameter(Label = "Read More Url", WidgetFunctionName = "Composite.Widgets.String.UrlComboBox")]
+    public string ReadMoreUrl { get; set; }
+
+    [FunctionParameter(Label = "Read More Text", DefaultValue = "Read More")]
+    public string ReadMoreText { get; set; }
+
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <div class="image-box">
+        <img src="/media(@Image)?w=718" alt="img" />
+        <div class="image-box-body">
+            <h3 class="title"><a href="@ReadMoreUrl">@Title</a></h3>
+            <p>@Markup(Description)</p>
+            @if (!string.IsNullOrWhiteSpace(ReadMoreUrl))
+            {
+                <a href="@ReadMoreUrl" class="btn btn-sm btn-default"><span>@ReadMoreText</span></a>
+            }
+        </div>
+    </div>
+</body>
+</html>

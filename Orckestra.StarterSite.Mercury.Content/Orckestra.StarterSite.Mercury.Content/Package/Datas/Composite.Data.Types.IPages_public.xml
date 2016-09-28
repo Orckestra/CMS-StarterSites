@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Add Id="19eddbc9-b601-41b3-86bd-2b5966c5e18a" TemplateId="0526ad34-c540-418e-8c23-0eec2a8da2ce" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="Services" MenuTitle="Services" UrlTitle="Services" FriendlyUrl="" Description="" ChangeDate="2016-09-07 13:25:49Z" ChangedBy="admin"   PublicationStatus="published" SourceCultureName="en-US" />
+  <Add Id="9ace435a-7970-40f7-8ca7-b6f5607fa589" TemplateId="e3851f7a-3f4b-4eda-9708-07c3b6020e08" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="Contact" MenuTitle="Contact us" UrlTitle="Contact" FriendlyUrl="" Description="" ChangeDate="2016-09-26 09:48:58Z" ChangedBy="admin"   PublicationStatus="published" SourceCultureName="en-US" />
+  <Add Id="f90418c7-9654-4226-81c1-3b4e959f4f39" TemplateId="e3851f7a-3f4b-4eda-9708-07c3b6020e08" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="About us" MenuTitle="About us" UrlTitle="About-us" FriendlyUrl="" Description="" ChangeDate="2016-09-07 13:25:49Z" ChangedBy="admin"   PublicationStatus="published" SourceCultureName="en-US" />
+  <Add Id="a3055286-0e90-4b04-99dd-fb1a61dde0bf" TemplateId="a270f819-0b5c-4f7e-9194-4b554043e4ab" PageTypeId="de22fed1-0729-4ad3-aa1c-6047e54bf429" Title="Frontpage" MenuTitle="Home" UrlTitle="" FriendlyUrl="" Description="" ChangeDate="2016-09-26 10:26:08Z" ChangedBy="admin"  PublicationStatus="published" SourceCultureName="en-US" />
+</Data>

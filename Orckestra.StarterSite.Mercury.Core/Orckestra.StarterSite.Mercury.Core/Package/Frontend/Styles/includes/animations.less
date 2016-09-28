@@ -1,0 +1,57 @@
+@import "animations/bounce.less";
+@import "animations/fade.less";
+@import "animations/flash.less";
+@import "animations/pulse.less";
+@import "animations/swing.less";
+@import "animations/zoom.less";
+
+.object-non-visible {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+    .object-visible,
+    .touch .object-non-visible {
+        opacity: 1 !important;
+        filter: alpha(opacity=100) !important;
+    }
+
+/* Targeting only Firefox for smoothest animations */
+@-moz-document url-prefix() {
+    .object-visible,
+    .touch .object-non-visible {
+        -webkit-transition: opacity 0.6s ease-in-out;
+        -moz-transition: opacity 0.6s ease-in-out;
+        -o-transition: opacity 0.6s ease-in-out;
+        -ms-transition: opacity 0.6s ease-in-out;
+        transition: opacity 0.6s ease-in-out;
+    }
+}
+
+.no-trans * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+a {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+
+
+

@@ -1,0 +1,42 @@
+﻿.bg-light {
+    background-color: @gray-lighter;
+    color: @gray-darker;
+
+    .btn-default {
+        background: darken(@btn-default-bg, 5%);
+    }
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-primary {
+    h1, h2, h3, h4 {
+        em, small, strong {
+            color: @gray-dark;
+        }
+    }
+
+    .btn-primary {
+        border-color: #fff;
+    }
+}
+
+.bg-dark {
+    background-color: @gray-darker;
+    color: @gray-lighter;
+
+    em {
+        color: @brand-primary;
+    }
+
+    .text-muted, .text-muted small, .text-muted em {
+        color: @text-muted;
+    }
+}
+
+.bg-gray {
+    background-color: @gray-dark;
+    color: @gray-lighter;
+}

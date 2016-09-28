@@ -1,0 +1,22 @@
+﻿.list {
+    list-style: none;
+    padding: 0;
+}
+
+
+.list-check-icons {
+    list-style: outside none none;
+    padding: 0;
+
+    li {
+        padding: 5px 0;
+
+        &:before {
+            content: "\f00c";
+            font-family: "FontAwesome";
+            display: inline-block;
+            padding-right: 8px;
+            color: @gray-light;
+        }
+    }
+}

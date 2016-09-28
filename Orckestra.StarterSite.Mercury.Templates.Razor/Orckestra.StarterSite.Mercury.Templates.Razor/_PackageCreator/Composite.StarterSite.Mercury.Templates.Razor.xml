@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:Files>
+		<Add name="App_Data\PageTemplates\Frontpage.cshtml" />
+		<Add name="App_Data\PageTemplates\MasterLayout.cshtml" />
+		<Add name="App_Data\PageTemplates\Page with left aside.cshtml" />
+		<Add name="App_Data\PageTemplates\Page with left navigation.cshtml" />
+		<Add name="App_Data\PageTemplates\Page with navigation and right aside.cshtml" />
+		<Add name="App_Data\PageTemplates\Page with right aside.cshtml" />
+		<Add name="App_Data\PageTemplates\Page with right navigation.cshtml" />
+		<Add name="App_Data\PageTemplates\Page.cshtml" />
+	</pc:Files>
+	<mi:PackageRequirements minimumCompositeVersion="4.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.Mercury.Templates.Razor" groupName="Orckestra.StarterSite" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="635d3b31-a0c4-4f32-9368-0c2b7a010d8c" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>Razor Based Templates</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>
