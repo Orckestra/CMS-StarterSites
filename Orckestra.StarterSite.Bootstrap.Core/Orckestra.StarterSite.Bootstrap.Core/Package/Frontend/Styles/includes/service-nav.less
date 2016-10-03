@@ -1,0 +1,14 @@
+﻿@media (min-width: @grid-float-breakpoint) {
+    .service-nav {
+        float: right;
+
+        > div, > .navbar-nav {
+            float: left;
+
+            > *:first-child, > ul {
+                line-height: @navbar-height;
+                vertical-align: middle;
+            }
+        }
+    }
+}
