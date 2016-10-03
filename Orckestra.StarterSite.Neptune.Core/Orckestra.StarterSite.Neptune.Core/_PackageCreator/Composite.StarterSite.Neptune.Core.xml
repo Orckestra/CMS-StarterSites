@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:PageTypes>
+		<Add name="Case" />
+		<Add name="Home" />
+		<Add name="Page" />
+	</pc:PageTypes>
+	<pc:DynamicDataTypes>
+		<Add name="Layout.Navigation.TopLink" />
+	</pc:DynamicDataTypes>
+	<pc:Functions>
+		<Add name="Widgets.FontIconSelector.GetIconsNames" />
+	</pc:Functions>
+	<pc:Directories>
+		<Add name="Frontend\fonts\" />
+		<Add name="Frontend\Images\" />
+		<Add name="Frontend\Styles\bootstrap\" />
+		<Add name="Frontend\Styles\flexslider\" />
+		<Add name="Frontend\Styles\font-awesome\" />
+		<Add name="Frontend\Styles\includes\" />
+		<Add name="App_Data\PageTemplateFeatures\" />
+		<Add name="Frontend\Scripts\libs\" />
+	</pc:Directories>
+	<pc:Files>
+		<Add name="App_Data\Razor\Layout\Helpers\InjectContainerElements.cshtml" />
+		<Add name="App_Data\Razor\Layout\Navigation\Breadcrumbs.cshtml" />
+		<Add name="App_Data\Razor\Layout\Navigation\MainMenu.cshtml" />
+		<Add name="App_Data\Razor\Layout\Navigation\TopLinks.cshtml" />
+		<Add name="App_Data\Razor\Layout\CommonHtmlHead.cshtml" />
+		<Add name="App_Data\Razor\Widgets\Cases.cshtml" />
+		<Add name="App_Data\Razor\Widgets\CasesMenu.cshtml" />
+		<Add name="Frontend\Config\VisualEditor\common.xml" />
+		<Add name="Frontend\Styles\style.less" />
+		<Add name="Frontend\Styles\VisualEditor.common.less" />
+		<Add name="Frontend\Styles\VisualEditor.less" />
+		<Add name="Frontend\Scripts\script.js" />
+		<Add name="Frontend\Scripts\flexslider.js" />
+		<Add name="App_Data\Razor\PageBlocks\Jumbotron.cshtml" />
+		<Add name="App_Data\Razor\PageBlocks\JumbotronSlides.cshtml" />
+		<Add name="Frontend\Styles\PageBlocks\Jumbotron.less" />
+		<Add name="Frontend\Styles\PageBlocks\JumbotronSlides.less" />
+	</pc:Files>
+	<mi:PackageRequirements minimumCompositeVersion="4.2.5352.24809" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Composite.StarterSite.Neptune.Core" groupName="Composite.StarterSite" version="1.0.0" author="Composite A/S" website="http://composite.net" readMoreUrl="http://composite.net" id="cdd53142-6c0b-44dc-8648-562c24c23777" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>-</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>

@@ -1,0 +1,50 @@
+﻿@inherits RazorPageTemplate
+@functions {
+	public override void Configure()
+	{
+		TemplateId = new Guid("53851f7a-3f4b-4eda-9708-0743b6020e68");
+		TemplateTitle = "Page with navigation and right aside";
+		Layout = "MasterLayout.cshtml";
+	}
+
+	[Placeholder(Id = "start", Title = "Page Start")]
+	public XhtmlDocument Start { get; set; }
+
+	[Placeholder(Id = "content", IsDefault = true)]
+	public XhtmlDocument Content { get; set; }
+
+
+	[Placeholder(Id = "aside", Title = "Aside column")]
+	public XhtmlDocument Aside { get; set; }
+
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	@*you can add template specific head elements here*@
+</head>
+<body class="page-with-nav">
+	@this.Function("Layout.Helpers.InjectContainerElements",
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 nav-column">
+				<div class="sidebar">
+					<div class="nav-sidebar hidden-print visible-lg visible-md visible-sm">
+						@PageTemplateFeature("Navigation Column")
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 content-column">
+				@Markup(Content)
+			</div>
+			<div class="col-md-3">
+				<div class="sidebar">
+					@Markup(Aside)
+					@PageTemplateFeature("Aside Column")
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

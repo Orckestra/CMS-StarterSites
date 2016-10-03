@@ -1,0 +1,42 @@
+﻿/* fix responsive isssue for IE10 on Windows Phone 8 */
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport
+
+{
+    width: device-width;
+}
+/* end fix */
+
+a:hover, a:active, a:focus {
+    outline: none !important; // for IE
+}
+
+//offsetting the html anchor to adjust for fixed navbar
+.anchor:before {
+    content: '';
+    width: 0;
+    height: @navbar-height + 20;
+    display: block;
+    position: relative;
+    margin-top: -(@navbar-height + 20);
+}
+
+/* In FireFox  abbr tag shows dotted underline  */
+abbr[title] {
+  text-decoration: none;
+}

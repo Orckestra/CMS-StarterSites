@@ -1,0 +1,57 @@
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "A function that outputs the Cases Navigation."; }
+    }
+}
+
+@{
+    var pages = CurrentPageNode.ParentPage.ChildPages.ToList();
+    PageNode next = null;
+    PageNode prev = null;
+
+    for (var i = 0; i < pages.Count; i++)
+    {
+        var node = pages[i];
+
+        if (node.Id == CurrentPageNode.Id)
+        {
+            if (i < (pages.Count - 1))
+            {
+                next = pages[i + 1];
+            }
+
+            if (i > 0)
+            {
+                prev = pages[i - 1];
+            }
+
+            break;
+        }
+    }
+
+    if (prev == null)
+    {
+        prev = pages.Last();
+    }
+
+    if (next == null)
+    {
+        next = pages.First();
+    }
+}
+
+<div class="cases-nav">
+    <a class="cases-nav-item" href="@Html.C1().PageUrl(CurrentPageNode.ParentPage.Id.ToString())" title="Alle cases"><span class="glyphicon glyphicon-th"></span></a>
+    @if (next != null)
+    {
+        <a class="cases-nav-item" href="@Html.C1().PageUrl(next.Id.ToString())" title="Next case"><span class="hover-title">@next.Title</span><span class="fa fa-chevron-right"></span></a>
+    }
+    @if (prev != null)
+    {
+        <a class="cases-nav-item" href="@Html.C1().PageUrl(prev.Id.ToString())" title="Prev case"><span class="hover-title">@prev.Title</span><span class="fa fa-chevron-left"></span></a>
+    }
+
+</div>

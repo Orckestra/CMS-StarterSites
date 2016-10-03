@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:Excludes>
+		<Add name="3a613405-9990-47a6-8f00-672a8e6de9e7" type="page">
+		</Add>
+		<Add name="f90418c7-9654-4226-81c1-3b4e959f4f39" type="page">
+		</Add>
+		<Add name="fec78884-8f7a-4f4d-b9b7-eb0c9654c378" type="page">
+		</Add>
+	</pc:Excludes>
+	<pc:PageTrees>
+		<Add name="a3055286-0e90-4b04-99dd-fb1a61dde0bf" root="false" data="true" />
+	</pc:PageTrees>
+	<mi:PackageRequirements minimumCompositeVersion="4.2.5352.24809" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Content" groupName="Orckestra.StarterSite" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="adb3958f-01f3-412a-9cdd-978becc19c20" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>Starter site content</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>

@@ -1,0 +1,42 @@
+﻿@inherits RazorPageTemplate
+
+@functions {
+    public override void Configure()
+    {
+        TemplateId = new Guid("7aba9088-99c6-415e-88d4-fb30a3f7d213");
+        TemplateTitle = "Case Page";
+        Layout = "MasterLayout.cshtml";
+    }
+
+    [Placeholder(Id = "jumbotron", Title = "Case Jumbotron", IsDefault = false)]
+    public XhtmlDocument Slider { get; set; }
+
+    [Placeholder(Id = "title", Title = "Case Title", IsDefault = true)]
+    public XhtmlDocument Title { get; set; }
+
+    [Placeholder(Id = "left", Title = "Case Left Column", IsDefault = false)]
+    public XhtmlDocument Left { get; set; }
+
+    [Placeholder(Id = "right", Title = "Case Right Column", IsDefault = false)]
+    public XhtmlDocument Right { get; set; }
+
+    [Placeholder(Id = "content", Title = "Content", IsDefault = false)]
+    public XhtmlDocument Content { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body class="case-page content-page">
+    @Html.C1().Function("Widgets.CasesMenu")
+    @Markup(Slider)
+    <div class="container">
+        @Markup(Title)
+        <div class="row case-body">
+            <div class="col-md-4"><div class="col-inner">@Markup(Left)</div></div>
+            <div class="col-md-8">@Markup(Right)</div>
+        </div>
+    </div>
+    @this.Function("Layout.Helpers.InjectContainerElements", new { Document = Content, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+</body>
+</html>

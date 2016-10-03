@@ -1,0 +1,130 @@
+﻿.dropdown-backdrop {
+    left: 280px;
+}
+
+.main-nav {
+    position: absolute;
+    height: 100%;
+    left: -280px;
+    width: 280px;
+    z-index: @zindex-navbar + 50;
+    padding: 0;
+    border-right: solid 1px @navbar-default-border;
+    background-color: @navbar-default-bg;
+    color: @navbar-default-link-color;
+
+    .main-nav-close {
+        color: @white-color;
+        font-family: @font-family-monospace;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 20px;
+        display: block;
+
+        &:hover {
+            color: @brand-primary;
+            text-decoration: none;
+        }
+    }
+
+    > ul {
+        list-style: none;
+        padding: 0;
+
+        > li {
+            position: relative;
+            display: block;
+            border-bottom: solid 1px @navbar-default-border;
+
+            > a {
+                display: block;
+                padding: @nav-link-padding;
+                font-size: @main-menu-level1-font-size;
+
+                &:hover, &:active, &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            position: static;
+            float: none;
+            background-color: @navbar-default-bg;
+            margin: 0 0 20px 30px;
+            .box-shadow(none);
+            border: 0;
+
+            a {
+                padding: 10px 20px;
+                font-size: @main-menu-level2-font-size;
+            }
+
+            .dropdown-menu-rootpage {
+                padding: 0 20px 10px 20px;
+                display: block;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            ul ul {
+                margin-left: 30px;
+            }
+        }
+
+            a, .dropdown-menu a {
+                color: @navbar-default-link-color;
+                font-weight: normal;
+
+                &:hover {
+                    color: @navbar-default-link-hover-color;
+                    text-decoration: none;
+                }
+
+                &.active {
+                    color: @brand-primary;
+                }
+            }
+
+        li.open > a {
+            color: @navbar-default-link-hover-color;
+        }
+    }
+
+    address {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .main-nav {
+        left: -320px;
+        width: 320px;
+
+
+        .main-nav-close {
+            padding: 20px 40px;
+        }
+
+        > ul {
+            margin-bottom: 30px;
+
+            > li {
+                > a {
+                    padding: 30px 40px;
+                }
+            }
+        }
+
+        address {
+            padding: 0 40px;
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+
+    .main-nav {
+        position: fixed;
+    }
+}

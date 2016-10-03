@@ -1,0 +1,60 @@
+﻿@brand-primary:         #4189ff;
+
+@body-bg:              #f0efed;
+
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-size-base:          18px;
+
+@line-height-base:        1.8;
+
+@headings-font-family:    "Open Sans";
+@headings-font-weight:    bold;
+
+@padding-base-vertical:     12px;
+@padding-base-horizontal:   12px;
+
+@padding-large-vertical:    12px;
+
+@btn-font-weight:                bold;
+
+@btn-default-color:              #1e1f21;
+@btn-default-bg:                 rgba(255, 255, 255, 0);
+@btn-default-border:             @btn-default-color;
+
+@btn-primary-border:             @btn-primary-bg;
+
+@border-radius-base:        2px;
+@border-radius-large:       4px;
+@border-radius-small:       1px;
+
+
+//** Dropdown link text color.
+@dropdown-link-color:            @gray-dark;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      @brand-primary;
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         @gray-lighter;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @brand-primary;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        #fff;
+
+@grid-float-breakpoint:     9999px;
+
+@navbar-height:                    80px;
+
+@navbar-collapse-max-height:       568px;
+
+@navbar-default-color:             #fff;
+@navbar-default-bg:                #0e0e0f;
+@navbar-default-border:            lighten(@navbar-default-bg, 10%);
+
+@navbar-default-link-color:                #7b7b79;
+@navbar-default-link-hover-color:          #fff;
+
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            transparent;
+
+@nav-link-hover-bg:                         transparent;

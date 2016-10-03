@@ -1,0 +1,142 @@
+﻿.jumbotron-slides {
+    position: relative;
+
+    .flexslider {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        background: @gray-dark;
+
+        .flex-control-nav {
+            bottom: 0;
+            display: none;
+            z-index: 9;
+
+            li:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .flex-direction-nav {
+            display: none;
+
+            @media (min-width: @screen-sm-min) {
+                display: block;
+            }
+        }
+
+            .flex-direction-nav a {
+                height: 100%;
+                margin: 0;
+                text-shadow: none;
+                top: 0;
+                width: 150px;
+
+                &:before {
+                    content: none;
+                }
+
+                &.flex-prev {
+                    width: 80px;
+                    left: 0;
+                }
+
+                &.flex-next {
+                    right: 0;
+                }
+            }
+
+        .flex-push, .jumbotron-content {
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            left: 0;
+        }
+
+        .flex-push {
+            position: relative;
+            right: 0;
+        }
+
+        .flex-push-right {
+            right: 150px;
+            left: -150px;
+
+
+
+            .jumbotron-content {
+                left: 80px;
+            }
+        }
+
+        .flex-push-left {
+            right: -150px;
+            left: 150px;
+        }
+    }
+
+    .flex-control-paging {
+        li {
+            a {
+                background: none;
+                border: 2px solid @white-color;
+                -webkit-box-shadow: none !important;
+                -moz-box-shadow: none !important;
+                -o-box-shadow: none !important;
+                box-shadow: none !important;
+
+                &.flex-active {
+                    background: @white-color;
+                }
+            }
+        }
+    }
+
+    .flex-control-nav {
+        text-align: left;
+        padding: 0 80px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .flexslider {
+            .flex-control-nav {
+                display: block;
+            }
+
+            .flex-content {
+                position: absolute;
+                top: 0;
+                padding: 0 80px;
+            }
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        .flexslider {
+            .flex-control-nav {
+                display: block;
+            }
+
+            .flex-content {
+                position: absolute;
+                top: 0;
+                padding: 100px 80px 0 80px;
+            }
+        }
+    }
+
+    .jumbotron-content {
+        max-width: 98%;
+
+        @media (min-width: @screen-md-min) {
+            max-width: 50%;
+        }
+
+        @media (min-width: @screen-sm-min) {
+            padding: 0 80px;
+        }
+    }
+}

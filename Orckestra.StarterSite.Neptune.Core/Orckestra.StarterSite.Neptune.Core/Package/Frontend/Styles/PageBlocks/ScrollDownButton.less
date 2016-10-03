@@ -1,0 +1,31 @@
+﻿.scroll-down {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+
+    .scroll-down-btn {
+        display: inline-block;
+        position: relative;
+        z-index: 1000;
+        height: 50px;
+        padding: 10px 35px;
+        margin-top: -78px;
+        text-decoration: none;
+        border: 0;
+    }
+
+    .scroll-down-btn-light {
+        background: rgba(255,255,255,0.3);
+        color: @white-color;
+    }
+
+    .scroll-down-btn-dark {
+        background: rgba(0,0,0,0.6);
+        color: @white-color;
+    }
+
+    .scroll-down-btn:hover {
+        background: @brand-primary;
+    }
+}

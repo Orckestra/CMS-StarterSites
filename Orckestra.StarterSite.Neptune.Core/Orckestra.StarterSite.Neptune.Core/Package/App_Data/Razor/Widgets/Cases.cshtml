@@ -1,0 +1,66 @@
+@using Composite.StarterSite.Data
+@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "A function that outputs the Cases list."; }
+    }
+
+    private const string CasesParentPageGuid = "b49b64e3-ee0a-4b12-b55f-6228210e4e8f";
+}
+
+@{
+    var casesParentPage = Sitemap.GetPageNodeById(Guid.Parse(CasesParentPageGuid));
+
+    if (casesParentPage == null)
+    {
+        return;
+    }
+
+    var cases = Data.Get<Case>();
+    var casesAndPages = casesParentPage.ChildPages.Join(cases, p => p.Id, c => c.PageId, (p, c) => new { Page = p, Case = c }).ToList();
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+    <div class="container cases-list">
+        @foreach (var item in casesAndPages)
+        {
+            string[] descBlocks = item.Case.Description.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+            <div class="row cases-list-item">
+                <div class="col-xs-12 col-sm-12 col-md-8 item-img">
+                    @if (item.Case.Image != null)
+                    {
+                        <img src="@Html.C1().MediaUrl(item.Case.Image)" class="img-responsive" alt="@item.Case.Name" />
+                    }
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 item-body">
+                    <div class="item-title">@item.Case.Name</div>
+                    @for (var i = 0; i < descBlocks.Length; i++)
+                    {
+                        var block = descBlocks[i];
+                        if (i == 0)
+                        {
+                            <p><strong>@block</strong></p>
+                            continue;
+                        }
+                        <p>@block</p>
+                    }
+                    @if (!string.IsNullOrEmpty(item.Case.Link))
+                    {
+                        var linkTitle = item.Case.Link.Length > 45 ? item.Case.Link.Substring(0, 44) + "..." : item.Case.Link;
+                        <div class="item-link">
+                            <a href="@item.Case.Link" title="@item.Case.Link">@linkTitle</a>
+                        </div>
+                    }
+                    <a class="btn btn-default item-view" href="@Html.C1().PageUrl(item.Page.Id.ToString())">View Case</a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

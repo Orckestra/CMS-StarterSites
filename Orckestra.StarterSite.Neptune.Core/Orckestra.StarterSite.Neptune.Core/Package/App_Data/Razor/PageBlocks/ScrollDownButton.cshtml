@@ -1,0 +1,26 @@
+﻿@inherits RazorFunction
+
+@functions {
+    public override string FunctionDescription
+    {
+        get { return "Scroll Down Button"; }
+    }
+
+    [FunctionParameter(Label = "Button Text", DefaultValue = "Scroll")]
+    public string ButtonText { get; set; }
+
+    private const string ButtonStyleWidgetMarkup = @"<f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.Selector""><f:param name=""Options""><f:function name=""Composite.Utils.String.Split""><f:param name=""String"" value=""light,dark"" /></f:function></f:param></f:widgetfunction>";
+    [FunctionParameter(Label = "Button Style", DefaultValue = "light", WidgetMarkup = ButtonStyleWidgetMarkup)]
+    public string ButtonStyle { get; set; }
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+    <head>
+        <script id="scrollDownButton-js" src="~/Frontend/Scripts/PageBlocks/ScrollDownButton.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="scroll-down c1-fullwidth ">
+            <a class="btn btn-default scroll-down-btn-@ButtonStyle scroll-down-btn hidden-xs">@ButtonText <span class="fa fa-chevron-down"></span></a>
+        </div>
+    </body>
+</html>

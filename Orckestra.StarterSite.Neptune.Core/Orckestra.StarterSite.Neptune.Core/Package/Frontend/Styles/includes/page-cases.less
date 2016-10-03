@@ -1,0 +1,140 @@
+﻿.cases-list {
+    max-width: 1170px;
+
+    .cases-list-item {
+        background-color: @white-color;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .item-img {
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 0;
+    }
+
+    .item-body {
+        padding: 1.5em 15px 15px;
+    }
+
+    .item-title {
+        font-size: 1.5em;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .item-link {
+        font-size: 0.8em;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .cases-list .item-body {
+        padding: 2.5em 30px 30px;
+    }
+}
+
+@media (max-width: 481px) {
+    .cases-list .item-view {
+        width: 100%;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 768px) {
+    .cases-list .item-view {
+        width: 40%;
+    }
+}
+
+@media (min-width: 990px) {
+    .cases-list {
+        .item-body {
+            padding-bottom: 120px;
+        }
+
+        .item-view {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        }
+    }
+}
+
+.case-page {
+
+    .case-body {
+        margin: 35px 0 50px 0;
+    }
+
+    .cases-nav {
+        display: none;
+    }
+
+    .col-inner {
+        padding: 0;
+
+        @media (min-width: @screen-md-min) {
+            padding: 0 60px 0 0;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .case-page {
+        .case-body {
+            margin-top: 70px;
+        }
+        .cases-nav {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            z-index: 99999;
+            height: 200px;
+            margin-top: -100px;
+            display: block;
+            border-top: solid 1px #ebebeb;
+
+            .hover-title {
+                display: none;
+                position: absolute;
+                top: 0;
+                height: 65px;
+                right: 65px;
+                white-space: nowrap;
+                background-color: @brand-primary;
+                padding-left: 30px;
+            }
+
+            .cases-nav-item {
+                display: block;
+                width: 65px;
+                position: relative;
+                height: 65px;
+                line-height: 65px;
+                vertical-align: middle;
+                text-align: center;
+                background: #fff;
+                border-bottom: solid 1px #ebebeb;
+                border-left: solid 1px #ebebeb;
+                color: #858483;
+
+                &:hover {
+                    background-color: @brand-primary;
+                    color: #fff;
+                    text-decoration: none;
+                    border-color: @brand-primary;
+
+                    .hover-title {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
