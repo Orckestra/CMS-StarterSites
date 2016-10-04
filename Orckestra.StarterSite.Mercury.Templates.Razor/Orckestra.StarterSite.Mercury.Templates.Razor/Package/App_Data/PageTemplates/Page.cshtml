@@ -20,10 +20,10 @@
 </head>
 <body class="page">
 	@this.Function("Layout.Helpers.InjectContainerElements",
-        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth,cms-fullwidth" })
 
 	<f:function name="Layout.Navigation.Breadcrumbs" xmlns:f="http://www.composite.net/ns/function/1.0" />
 
-	@this.Function("Layout.Helpers.InjectContainerElements", new { Document = Content, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+	@this.Function("Layout.Helpers.InjectContainerElements", new { Document = Content, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth,cms-fullwidth" })
 </body>
 </html>

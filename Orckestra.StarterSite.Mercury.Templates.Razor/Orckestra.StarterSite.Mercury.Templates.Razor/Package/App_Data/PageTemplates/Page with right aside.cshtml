@@ -22,14 +22,16 @@
 </head>
 <body class="page-with-aside">
 	@this.Function("Layout.Helpers.InjectContainerElements",
-        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth,cms-fullwidth" })
 
 	<f:function name="Layout.Navigation.Breadcrumbs" xmlns:f="http://www.composite.net/ns/function/1.0" />
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 content-column">
-				@Markup(Content)
+			<div class="col-md-8">
+				<div class="content-column">
+					@Markup(Content)
+				</div>
 			</div>
 			<div class="col-md-3 col-md-offset-1">
 				<div class="sidebar">

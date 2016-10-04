@@ -24,21 +24,23 @@
 </head>
 <body class="page-with-nav">
 	@this.Function("Layout.Helpers.InjectContainerElements",
-        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth" })
+        new { Document = Start, InjectedContainerClassName = "container", DontApplyClassNameList = "container,container-fluid,c1-fullwidth,cms-fullwidth" })
 
 	<f:function name="Layout.Navigation.Breadcrumbs" xmlns:f="http://www.composite.net/ns/function/1.0" />
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 nav-column">
-				<div class="sidebar">
-					<div class="nav-sidebar hidden-print visible-lg visible-md visible-sm">
+			<div class="col-md-3">
+				<div class="nav-column hidden-print visible-lg visible-md visible-sm">
+					<div class="nav-sidebar">
 						@PageTemplateFeature("Navigation Column")
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 content-column">
-				@Markup(Content)
+			<div class="col-md-6">
+				<div class="content-column">
+					@Markup(Content)
+				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="sidebar">
