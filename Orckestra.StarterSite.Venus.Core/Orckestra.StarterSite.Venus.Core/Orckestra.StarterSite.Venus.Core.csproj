@@ -65,7 +65,6 @@
     <Content Include="packages.config" />
     <Compile Include="Package\App_Data\Composite\InlineCSharpFunctions\Widgets.FontIconSelector.GetIconsNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\BackgroundStyleOptions.xml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\Image.cshtml" />
     <Content Include="Package\Frontend\Scripts\bootstrap\bootstrap.js" />
     <Content Include="Package\Frontend\Scripts\bootstrap\bootstrap.min.js" />
@@ -166,7 +165,6 @@
     <Content Include="Package\App_Data\Razor\Layout\Navigation\TopLinks.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedStatement.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\Jumbotron.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\Statement.cshtml" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.woff" />
