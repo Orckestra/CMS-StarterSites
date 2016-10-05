@@ -76,7 +76,6 @@
     <Content Include="Package\App_Data\Razor\PageBlocks\BackgroundStyleOptions.xml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedBox.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedText.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\ImageAndText.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\ImageBox.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\JumbotronSlides\AnimatedContentItem.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\Statement.cshtml" />
@@ -186,7 +185,6 @@
     <Content Include="Package\Frontend\Styles\includes\service-menu.less" />
     <Content Include="Package\Frontend\Styles\includes\typography.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\IconifiedBox.less" />
-    <Content Include="Package\Frontend\Styles\PageBlocks\ImageAndText.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\ImageBox.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\Statement.less" />
     <Content Include="Package\Frontend\Styles\style.less" />
