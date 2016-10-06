@@ -119,7 +119,6 @@
     <Content Include="Package\Frontend\Styles\PageBlocks\BackgroundOptions.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\Jumbotron.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\PageImage.less" />
-    <Content Include="Package\Frontend\Styles\PageBlocks\Statements.less" />
     <Content Include="Package\Frontend\fonts\fontawesome-webfont.woff2" />
   </ItemGroup>
   <ItemGroup>
@@ -163,7 +162,6 @@
     <Content Include="Package\App_Data\Razor\Layout\Helpers\InjectContainerElements.cshtml" />
     <Content Include="Package\App_Data\Razor\Layout\Navigation\MegaMenu.cshtml" />
     <Content Include="Package\App_Data\Razor\Layout\Navigation\TopLinks.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedStatement.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\Jumbotron.cshtml" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.ttf" />

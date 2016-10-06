@@ -73,9 +73,7 @@
     <Content Include="Package\App_Data\Razor\Layout\Navigation\MainMenu.cshtml" />
     <Content Include="Package\App_Data\Razor\Layout\Navigation\TopLinks.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\AppearAnimation.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedBox.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedText.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\ImageBox.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\JumbotronSlides\AnimatedContentItem.cshtml" />
     <Content Include="Package\Frontend\fonts\fontawesome-webfont.eot" />
     <Content Include="Package\Frontend\fonts\fontawesome-webfont.ttf" />
@@ -182,8 +180,6 @@
     <Content Include="Package\Frontend\Styles\includes\scroll-to-top.less" />
     <Content Include="Package\Frontend\Styles\includes\service-menu.less" />
     <Content Include="Package\Frontend\Styles\includes\typography.less" />
-    <Content Include="Package\Frontend\Styles\PageBlocks\IconifiedBox.less" />
-    <Content Include="Package\Frontend\Styles\PageBlocks\ImageBox.less" />
     <Content Include="Package\Frontend\Styles\PageBlocks\Statement.less" />
     <Content Include="Package\Frontend\Styles\style.less" />
     <Content Include="Package\Frontend\Styles\VisualEditor.common.less" />

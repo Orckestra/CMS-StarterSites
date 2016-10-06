@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+  <Add Id="f98ede8d-2fba-4dbf-a97b-1d6e6c2e6fd2" TemplateId="0526ad34-c540-418e-8c23-0eec2a8da2ce" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="Image Teasers" MenuTitle="Image Teasers" UrlTitle="Image-Teasers" FriendlyUrl="" Description="" ChangeDate="2016-10-06 13:11:47Z" ChangedBy="admin" PublicationStatus="published" SourceCultureName="en-AU" />
+  <Add Id="98064ce4-7f92-42c8-8022-8e687886845c" TemplateId="0526ad34-c540-418e-8c23-0eec2a8da2ce" PageTypeId="f7869eb2-7369-4eb2-af47-e3be261e92c7" Title="Icon Teasers" MenuTitle="Icon Teasers" UrlTitle="Icon-Teasers" FriendlyUrl="" Description="" ChangeDate="2016-10-06 14:04:22Z" ChangedBy="admin" PublicationStatus="published" SourceCultureName="en-AU" />
+</Data>
