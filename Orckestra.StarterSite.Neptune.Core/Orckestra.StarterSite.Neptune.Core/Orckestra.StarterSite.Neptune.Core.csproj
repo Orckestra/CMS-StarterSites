@@ -75,8 +75,11 @@
     <Content Include="Package\App_Data\Razor\Widgets\Cases.cshtml" />
     <Content Include="Package\App_Data\Razor\Widgets\CasesMenu.cshtml" />
     <Content Include="Package\Frontend\bootstrap-variables-modified.txt" />
+    <Content Include="Package\Frontend\Images\overlay-dark.png" />
+    <Content Include="Package\Frontend\Images\overlay-light.png" />
     <Content Include="Package\Frontend\Scripts\bootstrap\bootstrap.js" />
     <Content Include="Package\Frontend\Scripts\PageBlocks\ScrollDownButton.js" />
+    <Content Include="Package\Frontend\Styles\font-awesome\font-awesome.min.css" />
     <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.eot" />
     <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.ttf" />
     <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.woff" />
@@ -238,10 +241,10 @@
     <Content Include="Package\Frontend\Styles\PageBlocks\BackgroundOptions.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Package\App_Data\Razor\PageBlocks\Statement.cshtml" />
+    <Content Include="Package\Frontend\Styles\PageBlocks\Statement.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Package\Frontend\Styles\PageBlocks\Statement.less" />
+    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

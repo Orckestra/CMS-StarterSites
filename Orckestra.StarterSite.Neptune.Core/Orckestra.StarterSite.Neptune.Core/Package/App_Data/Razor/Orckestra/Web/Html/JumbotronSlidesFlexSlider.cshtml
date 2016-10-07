@@ -2,45 +2,45 @@
 @inherits RazorFunction
 
 @functions {
-    public override string FunctionDescription
-    {
-        get { return "Jumbotron Slides with FlexSlider"; }
-    }
+	public override string FunctionDescription
+	{
+		get { return "Jumbotron Slides with FlexSlider"; }
+	}
 
-    protected string JumbotronInlineStyle(string backgroundImage)
-    {
-        return (!string.IsNullOrEmpty(backgroundImage) ? "background-image:url('/media(" + backgroundImage + ")');" : "");
-    }
+	protected string JumbotronInlineStyle(string backgroundImage)
+	{
+		return (!string.IsNullOrEmpty(backgroundImage) ? "background-image:url('/media(" + backgroundImage + ")');" : "");
+	}
 }
 
 @{
-    var slides = Data.Get<JumbotronSlide>().Where(s => s.PageId == CurrentPageNode.Id).OrderBy(s => s.Priority).ToList();
-    if (!slides.Any()) { return; }
+	var slides = Data.Get<JumbotronSlide>().Where(s => s.PageId == CurrentPageNode.Id).OrderBy(s => s.Priority).ToList();
+	if (!slides.Any()) { return; }
 }
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
 <head>
-	<link id="jumbotron-css" rel="stylesheet" type="text/css" href="~/Frontend/Orckestra/Web/Html/Jumbotron/Jumbotron.css" />
-	<link id="flexslider-less" rel="stylesheet" type="text/css" href="~/Frontend/Styles/Flexslider/flexslider.less"/>
+	<link id="flexslider-less" rel="stylesheet" type="text/css" href="~/Frontend/Styles/Flexslider/flexslider.less" />
 	<script id="jquery-flexslider-js" type="text/javascript" src="~/Frontend/Scripts/libs/jquery.flexslider.js"></script>
 	<script id="flexslider-js" type="text/javascript" src="~/Frontend/Scripts/flexslider.js"></script>
 </head>
 <body>
-    <div class="jumbotron-slides c1-fullwidth">
-        <div class="flexslider">
-            <ul class="slides">
-                @for (var i = 0; i < slides.Count(); i++)
-                {
-                    var slide = slides[i];
-                    <li class="jumbotron jumbotron-slide bg-cover translucent-bg @(slide.BgOverlay) @(i==0 ? "first-slide" : string.Empty)" style="@JumbotronInlineStyle(slide.BackgroundImage)">
+	<div class="jumbotron-flexslider c1-fullwidth">
+		<div class="flexslider">
+			<ul class="slides">
+				@for (var i = 0; i < slides.Count(); i++)
+				{
+					var slide = slides[i];
+					<li class="jumbotron jumbotron-slide jumbotron-@slide.BgOverlay @(i==0 ? "first-slide" : string.Empty)" style="@JumbotronInlineStyle(slide.BackgroundImage)">
+						<div class="overlay">
+							<div class="jumbotron-content">
+								@Html.Raw(slide.Content)
+							</div>
+						</div>
+					</li>
+				}
+			</ul>
+		</div>
+	</div>
 
-                            <div class="jumbotron-content centered-Y">
-                                @Html.Raw(slide.Content)
-                            </div>
-
-                    </li>
-                }
-            </ul>
-        </div>
-    </div>
 </body>
 </html>
