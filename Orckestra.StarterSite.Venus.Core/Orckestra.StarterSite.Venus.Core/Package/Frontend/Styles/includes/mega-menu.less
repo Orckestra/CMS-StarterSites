@@ -17,6 +17,21 @@
         position: static !important;
     }
 
+	.nav  > li {
+		> a {
+			color: @gray-darker;
+
+        &:hover {
+			color: @brand-primary;
+        }
+    }
+
+		&.open > a, &.active > a, &.active > a:hover {
+			color: @brand-primary;
+			background: none;
+		}
+	}
+
     .mega-dropdown-menu {
         padding: 0;
         width: 100%;
