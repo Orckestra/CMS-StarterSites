@@ -24,8 +24,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-               <a class="navbar-brand" href="<%= SiteMap.RootNode.Url %>" title="<%= (SiteMap.RootNode as CompositeC1SiteMapNode).DocumentTitle %>">
-                    <%= (SiteMap.RootNode as CompositeC1SiteMapNode).DocumentTitle %>
+               <a class="navbar-brand" href="<%= SiteMap.RootNode.Url %>" title="<%= (SiteMap.RootNode as CmsPageSiteMapNode).DocumentTitle %>">
+                    <%= (SiteMap.RootNode as CmsPageSiteMapNode).DocumentTitle %>
                </a>
             </div>
 
