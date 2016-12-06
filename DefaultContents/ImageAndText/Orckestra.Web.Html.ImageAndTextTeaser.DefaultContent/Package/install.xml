@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.Web.Html.ImageAndTextTeaser.DefaultContent" groupName="Orckestra.Web" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="0507ebc3-f3c8-426b-9d63-2a860175e835" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.Web.Html.ImageAndTextTeaser.DefaultContent" groupName="Orckestra.Web" version="1.0.1" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="0507ebc3-f3c8-426b-9d63-2a860175e835" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>
