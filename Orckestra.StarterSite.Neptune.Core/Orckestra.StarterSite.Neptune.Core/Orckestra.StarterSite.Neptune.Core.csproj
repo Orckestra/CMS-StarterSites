@@ -62,7 +62,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Package\App_Data\Composite\InlineCSharpFunctions\Widgets.FontIconSelector.GetIconsNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,10 +79,6 @@
     <Content Include="Package\Frontend\Scripts\bootstrap\bootstrap.js" />
     <Content Include="Package\Frontend\Scripts\PageBlocks\ScrollDownButton.js" />
     <Content Include="Package\Frontend\Styles\font-awesome\font-awesome.min.css" />
-    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.eot" />
-    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.woff" />
-    <Content Include="Package\Frontend\Styles\fonts\FontAwesome.otf" />
     <Content Include="Package\Frontend\Styles\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Package\Frontend\Styles\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Package\Frontend\Styles\fonts\glyphicons-halflings-regular.woff" />
@@ -159,12 +154,9 @@
     <Content Include="Package\App_Data\PageTemplateFeatures\Navigation Column.html" />
     <Content Include="Package\App_Data\PageTemplateFeatures\Page Footer.html" />
     <Content Include="Package\App_Data\PageTemplateFeatures\Service Menu.html" />
-    <Content Include="Package\Datas\Composite.Data.Types.IInlineFunctionAssemblyReferences_public.xml" />
-    <Content Include="Package\Datas\Composite.Data.Types.IInlineFunctions_public.xml" />
     <Content Include="Package\Datas\Composite.Data.Types.IPageTypeDataFolderTypeLinks_public.xml" />
     <Content Include="Package\Datas\Composite.Data.Types.IPageTypes_public.xml" />
     <Content Include="Package\Frontend\Config\VisualEditor\common.xml" />
-    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.svg" />
     <Content Include="Package\Frontend\Styles\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Package\Frontend\Images\logo.png" />
     <Content Include="Package\Frontend\Scripts\flexslider.js" />
@@ -226,6 +218,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Package\App_Data\Composite\InlineCSharpFunctions\" />
     <Folder Include="Release\" />
   </ItemGroup>
   <ItemGroup>
@@ -242,9 +235,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Package\Frontend\Styles\PageBlocks\Statement.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Package\Frontend\Styles\fonts\fontawesome-webfont.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

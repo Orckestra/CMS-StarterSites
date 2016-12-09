@@ -62,7 +62,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Package\App_Data\Composite\InlineCSharpFunctions\Widgets.FontIconSelector.GetIconsNames.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -75,11 +74,6 @@
     <Content Include="Package\App_Data\Razor\PageBlocks\AppearAnimation.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\IconifiedText.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\JumbotronSlides\AnimatedContentItem.cshtml" />
-    <Content Include="Package\Frontend\fonts\fontawesome-webfont.eot" />
-    <Content Include="Package\Frontend\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Package\Frontend\fonts\fontawesome-webfont.woff" />
-    <Content Include="Package\Frontend\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Package\Frontend\fonts\FontAwesome.otf" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.woff" />
@@ -197,11 +191,8 @@
     <Content Include="Package\App_Data\PageTemplateFeatures\Main Navigation.html" />
     <Content Include="Package\App_Data\PageTemplateFeatures\Navigation Column.html" />
     <Content Include="Package\App_Data\PageTemplateFeatures\Service Menu.html" />
-    <Content Include="Package\Datas\Composite.Data.Types.IInlineFunctionAssemblyReferences_public.xml" />
-    <Content Include="Package\Datas\Composite.Data.Types.IInlineFunctions_public.xml" />
     <Content Include="Package\Datas\Composite.Data.Types.IPageTypes_public.xml" />
     <Content Include="Package\Frontend\Config\VisualEditor\common.xml" />
-    <Content Include="Package\Frontend\fonts\fontawesome-webfont.svg" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Package\Frontend\Scripts\animations.js" />
     <Content Include="Package\Frontend\Scripts\bug-workarounds\ie10mobile-viewport.js" />
@@ -226,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Package\App_Data\Composite\DynamicTypeForms\" />
+    <Folder Include="Package\App_Data\Composite\InlineCSharpFunctions\" />
     <Folder Include="Package\App_Data\Composite\TreeDefinitions\" />
     <Folder Include="Package\App_Data\Razor\Layout\Page\" />
     <Folder Include="Package\Frontend\Scripts\PageBlocks\" />
