@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pc:PackageCreator xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0" xmlns:pc="http://www.composite.net/ns/management/packagecreator/2.0" xmlns:help="http://www.composite.net/ns/help/1.0">
+	<pc:PageTrees>
+		<Add name="d50ac812-c9da-4f5f-b841-6daf8cf7fb9e" root="false" data="true" />
+	</pc:PageTrees>
+	<mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.Web.Html.LinkButton.DefaultContent" groupName="Orckestra.Web" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com/" readMoreUrl="https://cms.orckestra.com/" id="86dd94cb-086d-41d9-9b8b-650db7e9e6b6" canBeUninstalled="true" systemLocking="none" flushOnCompletion="false">
+		<TechnicalDetails>-</TechnicalDetails>
+		<Description>-</Description>
+	</mi:PackageInformation>
+</pc:PackageCreator>
