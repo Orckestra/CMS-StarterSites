@@ -65,7 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Package\Datas\Composite.Community.Blog.Entriess_administrated.xml" />
+    <Content Include="Package\Datas\Composite.Community.Blog.Entriess_administrated.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Package\Datas\Composite.Community.Blog.Entriess_public.xml" />
     <Content Include="Package\Datas\Composite.Community.Blog.Tagss_public.xml">
       <SubType>Designer</SubType>
