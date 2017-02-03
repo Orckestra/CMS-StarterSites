@@ -70,7 +70,6 @@
     <Content Include="Package\Frontend\Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Package\Frontend\Scripts\libs\jquery.hoverIntent.js" />
     <Content Include="Package\Frontend\Styles\bootstrap-variables-modified.txt" />
-    <Content Include="Package\Frontend\Styles\font-awesome\font-awesome.min.css" />
     <Content Include="Package\Frontend\Styles\includes\fixes.less" />
     <Content Include="Package\Frontend\Styles\includes\language-switcher.less" />
     <Content Include="Package\Frontend\Styles\includes\newsletter.less" />
@@ -139,7 +138,6 @@
     <Content Include="Package\Frontend\Scripts\libs\html5-3.4-respond-1.1.0.min.js" />
     <Content Include="Package\Frontend\Scripts\libs\modernizr-2.6.1-respond-1.1.0.min.js" />
     <Content Include="Package\Frontend\Scripts\script.js" />
-    <Content Include="Package\Frontend\Styles\font-awesome\font-awesome.css" />
     <Content Include="Package\Frontend\Styles\style.css">
       <DependentUpon>style.less</DependentUpon>
     </Content>
@@ -155,7 +153,6 @@
     <Content Include="Package\App_Data\Razor\Layout\Helpers\InjectContainerElements.cshtml" />
     <Content Include="Package\App_Data\Razor\Layout\Navigation\MegaMenu.cshtml" />
     <Content Include="Package\App_Data\Razor\Layout\Navigation\TopLinks.cshtml" />
-    <Content Include="Package\App_Data\Razor\PageBlocks\Jumbotron.cshtml" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Package\Frontend\fonts\glyphicons-halflings-regular.woff" />
@@ -212,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Package\App_Data\Composite\" />
+    <Folder Include="Package\Frontend\Styles\font-awesome\" />
     <Folder Include="Release\" />
   </ItemGroup>
   <PropertyGroup>
