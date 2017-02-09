@@ -1,0 +1,6 @@
+<f:function name="PageBlocks.Blockquote" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
+		pal:title="Blockquote"
+		pal:description="Insert Blockquote"
+		pal:tags="page blocks"
+		pal:icon="message">
+</f:function>

@@ -1,0 +1,13 @@
+﻿@inherits RazorFunction
+
+@functions {
+	public override string FunctionDescription
+	{
+		get { return "Presentation Paragraph"; }
+	}
+
+
+	[FunctionParameter(Label = "Presentation Text",  WidgetFunctionName = "Composite.Widgets.String.TextArea")]
+	public string PresentationText { get; set; }
+}
+<p xmlns="http://www.w3.org/1999/xhtml" class="lead">@PresentationText</p>

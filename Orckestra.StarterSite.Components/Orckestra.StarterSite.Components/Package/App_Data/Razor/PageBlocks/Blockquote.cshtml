@@ -1,0 +1,36 @@
+﻿@inherits RazorFunction
+
+@functions {
+	public override string FunctionDescription
+	{
+		get { return "Blockquote"; }
+	}
+
+	[FunctionParameter(Label = "Title", DefaultValue = null)]
+	public string Heading { get; set; }
+
+	[FunctionParameter(Label = "Blockquote", WidgetFunctionName = "Composite.Widgets.String.TextArea")]
+	public string Blockquote { get; set; }
+
+
+	[FunctionParameter(Label = "Author", DefaultValue = null)]
+	public string Author { get; set; }
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+	@if (!string.IsNullOrEmpty(Heading))
+	{
+		<h2>@Heading</h2>
+	}
+
+	<blockquote>
+		<p>@Blockquote</p>
+		@if (!string.IsNullOrEmpty(Author))
+		{
+			<small>@Author</small>
+		}
+	</blockquote>
+</body>
+</html>

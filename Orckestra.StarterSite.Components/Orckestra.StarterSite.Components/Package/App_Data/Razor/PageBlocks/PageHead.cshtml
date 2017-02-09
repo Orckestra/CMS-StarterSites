@@ -1,0 +1,32 @@
+﻿@inherits RazorFunction
+
+@functions {
+	public override string FunctionDescription
+	{
+		get { return "Page Title and Presentation paragraph"; }
+	}
+
+	[FunctionParameter(Label = "Title")]
+	public string Heading { get; set; }
+
+	[FunctionParameter(Label = "Sub Title", Help= "Lighter, secondary text",  DefaultValue = null)]
+	public string SubHeading { get; set; }
+
+
+	[FunctionParameter(Label = "Presentation Text", DefaultValue = null, WidgetFunctionName = "Composite.Widgets.String.TextArea")]
+	public string PresentationText { get; set; }
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+	<h1 class="page-header">
+		@Heading
+		@if (!string.IsNullOrWhiteSpace(SubHeading))
+		{
+			<small>@SubHeading</small>
+		}
+	</h1>
+	<p class="lead">@PresentationText</p>
+</body>
+</html>

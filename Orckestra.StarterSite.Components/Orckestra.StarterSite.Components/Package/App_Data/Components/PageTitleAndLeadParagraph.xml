@@ -1,0 +1,8 @@
+<f:function name="PageBlocks.PageHead" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
+	pal:title="Page Title and Presentation Paragraph"
+	pal:description="Insert Title and first presentation text paragraph."
+	pal:tags="popular,page blocks"
+	pal:icon="text-one"
+	pal:container-anti-classes="aside"
+	pal:container-classes="">
+</f:function>

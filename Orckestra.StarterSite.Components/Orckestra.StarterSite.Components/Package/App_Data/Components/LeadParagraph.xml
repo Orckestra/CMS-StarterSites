@@ -1,0 +1,8 @@
+<f:function name="PageBlocks.LeadParagraph" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
+		pal:title="Presentation Paragraph"
+		pal:description="Insert presentation text paragraph."
+		pal:tags="page blocks"
+		pal:icon="text-align-center"
+		pal:container-anti-classes="aside"
+		pal:container-classes="">
+</f:function>
