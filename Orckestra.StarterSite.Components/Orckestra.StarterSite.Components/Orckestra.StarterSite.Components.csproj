@@ -68,6 +68,7 @@
     <Content Include="Package\App_Data\Components\Blockquote.xml" />
     <Content Include="Package\App_Data\Components\LeadParagraph.xml" />
     <Content Include="Package\App_Data\Components\PageTitleAndLeadParagraph.xml" />
+    <Content Include="Package\App_Data\Components\Table.xml" />
     <Content Include="Package\install.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -83,6 +84,9 @@
     <Content Include="Package\App_Data\Razor\PageBlocks\Blockquote.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\LeadParagraph.cshtml" />
     <Content Include="Package\App_Data\Razor\PageBlocks\PageHead.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Package\App_Data\Razor\PageBlocks\Table.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
