@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
   <mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-  <mi:PackageInformation name="Orckestra.StarterSite.Mercury.Core" groupName="Orckestra.StarterSite" version="2.0.4" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="75429558-8815-43bf-8eac-6c68d2725cb4" canBeUninstalled="false" systemLocking="hard" flushOnCompletion="true">
+  <mi:PackageInformation name="Orckestra.StarterSite.Mercury.Core" groupName="Orckestra.StarterSite" version="2.0.5" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="75429558-8815-43bf-8eac-6c68d2725cb4" canBeUninstalled="false" systemLocking="hard" flushOnCompletion="true">
     <TechnicalDetails>-</TechnicalDetails>
     <Description>-</Description>
   </mi:PackageInformation>
@@ -19,7 +19,6 @@
         <Directory sourceDirectory="~\App_Data\Razor\PageBlocks\" targetDirectory="~\App_Data\Razor\PageBlocks\" allowOverwrite="true" deleteTargetDirectory="false" />
         <Directory sourceDirectory="~\App_Data\Razor\Layout\" targetDirectory="~\App_Data\Razor\Layout\" allowOverwrite="true" deleteTargetDirectory="false" />
         <Directory sourceDirectory="~\App_Data\PageTemplateFeatures\" targetDirectory="~\App_Data\PageTemplateFeatures\" allowOverwrite="true" deleteTargetDirectory="false" />
-				<Directory sourceDirectory="~\App_Data\Components\" targetDirectory="~\App_Data\Components\" allowOverwrite="true" deleteTargetDirectory="false" />
       </Directories>
     </mi:Add>
     <mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DynamicDataTypePackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DynamicDataTypePackageFragmentUninstaller, Composite">

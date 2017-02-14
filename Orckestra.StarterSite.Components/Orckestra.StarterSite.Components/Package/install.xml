@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="5.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Components" groupName="Orckestra.StarterSite" version="1.0.3" author="Orckestra A/S" website="https://c1.orckestra.com/" readMoreUrl="-" id="12b53b71-a829-4972-b7e8-8ecd8c99841b" canBeUninstalled="true" systemLocking="none" flushOnCompletion="true" allowOverwrite="true">
+	<mi:PackageInformation name="Orckestra.StarterSite.Components" groupName="Orckestra.StarterSite" version="1.0.4" author="Orckestra A/S" website="https://c1.orckestra.com/" readMoreUrl="-" id="12b53b71-a829-4972-b7e8-8ecd8c99841b" canBeUninstalled="true" systemLocking="none" flushOnCompletion="true" allowOverwrite="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>
@@ -14,11 +14,13 @@
 				<File sourceFilename="~\App_Data\Razor\PageBlocks\Blockquote.cshtml" targetFilename="~\App_Data\Razor\PageBlocks\Blockquote.cshtml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Razor\PageBlocks\Table.cshtml" targetFilename="~\App_Data\Razor\PageBlocks\Table.cshtml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Razor\PageBlocks\ImageAndText.cshtml" targetFilename="~\App_Data\Razor\PageBlocks\ImageAndText.cshtml" allowOverwrite="true" />
+				<File sourceFilename="~\App_Data\Razor\PageBlocks\IconifiedText.cshtml" targetFilename="~\App_Data\Razor\PageBlocks\IconifiedText.cshtml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Components\LeadParagraph.xml" targetFilename="~\App_Data\Components\LeadParagraph.xml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Components\PageTitleAndLeadParagraph.xml" targetFilename="~\App_Data\Components\PageTitleAndLeadParagraph.xml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Components\Blockquote.xml" targetFilename="~\App_Data\Components\Blockquote.xml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Components\Table.xml" targetFilename="~\App_Data\Components\Table.xml" allowOverwrite="true" />
 				<File sourceFilename="~\App_Data\Components\ImageAndText.xml" targetFilename="~\App_Data\Components\ImageAndText.xml" allowOverwrite="true" />
+				<File sourceFilename="~\App_Data\Components\IconifiedText.xml" targetFilename="~\App_Data\Components\IconifiedText.xml" allowOverwrite="true" />
 			</Files>
 		</mi:Add>
 	</mi:PackageFragmentInstallers>
