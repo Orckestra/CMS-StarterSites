@@ -1,5 +1,5 @@
 ﻿<f:function name="PageBlocks.IconifiedText" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
-		pal:title="Icon and Text"
+		pal:title="Iconified Text"
 		pal:description="Insert icon and text"
 		pal:tags="page blocks"
 		pal:icon="smile"

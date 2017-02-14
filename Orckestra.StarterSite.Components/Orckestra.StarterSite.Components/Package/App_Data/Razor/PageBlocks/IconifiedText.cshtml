@@ -1,12 +1,12 @@
 ﻿@inherits RazorFunction
 
 @functions {
-    public override string FunctionDescription
-    {
-        get { return "Iconified Simple Text"; }
-    }
+	public override string FunctionDescription
+	{
+		get { return "Iconified Simple Text"; }
+	}
 
-    private const string iconWidget = @"
+	private const string iconWidget = @"
     <f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.FontIconSelector"">
 		<f:param name=""ClassNameOptions"">
 			<f:function name=""Orckestra.Web.Html.FontAwesome.GetIconNames"" />
@@ -15,11 +15,15 @@
 		<f:param name=""ClassNamePrefix"" value=""fa fa-"" />
 	</f:widgetfunction>";
 
-    [FunctionParameter(Label = "Icon", Help = "The icon to show before the text", DefaultValue = null, WidgetMarkup = iconWidget)]
-    public string Icon { get; set; }
+	[FunctionParameter(Label = "Icon", Help = "The icon to show before the text", DefaultValue = null, WidgetMarkup = iconWidget)]
+	public string Icon { get; set; }
 
-    [FunctionParameter(Label = "Text", Help = "The text to show after the icon.", DefaultValue = null)]
-    public string Text { get; set; }
+	private const string iconColorWidgetMarkup = @"<f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.Selector""><f:param name=""Options""><f:function name=""Composite.Utils.String.Split""><f:param name=""String"" value=""default,muted,info,primary,success,warning,danger"" /></f:function></f:param></f:widgetfunction>";
+	[FunctionParameter(Label = "Icon Color", DefaultValue = "default", WidgetMarkup = iconColorWidgetMarkup)]
+	public string IconColor { get; set; }
+
+	[FunctionParameter(Label = "Text", Help = "The text to show after the icon.", DefaultValue = null)]
+	public string Text { get; set; }
 }
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
@@ -27,7 +31,7 @@
 </head>
 <body>
     <p>
-        <i class="fa fa-@Icon">&#160;</i>
+        <i class="fa fa-@Icon text-@IconColor">&#160;</i>
         @Text
     </p>
 </body>
