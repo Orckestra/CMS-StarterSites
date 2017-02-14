@@ -1,0 +1,71 @@
+﻿@inherits RazorFunction
+
+@functions {
+	public override string FunctionDescription
+	{
+		get { return "Produce Table"; }
+	}
+
+	[FunctionParameter(Label = "Rows Count")]
+	public int Rows { get; set; }
+
+	[FunctionParameter(Label = "Columns Count")]
+	public int Columns { get; set; }
+
+
+	[FunctionParameter(Label = "Responsive Table", Help = "Responsive Table will scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in this table.", DefaultValue = true)]
+	public bool IsResponsive { get; set; }
+
+	private const string tableStyleidgetMarkup = @"<f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.Selector"">
+													<f:param name=""Options""><f:function name=""Composite.Utils.String.Split"">
+														<f:param name=""String"" value=""table-striped,table-bordered,table-hover,table-condensed"" /></f:function></f:param>
+													<f:param name=""Multiple"" value=""True"" />
+													<f:param name = ""Required"" value=""False"" />
+												</f:widgetfunction>";
+	[FunctionParameter(Label = "Table Style", DefaultValue = null, WidgetMarkup = tableStyleidgetMarkup)]
+	public string TableStyle { get; set; }
+
+}
+@{
+
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+	@if (IsResponsive)
+	{
+		<div class="table-responsive">@RenderTable()</div>
+	}
+	else
+	{
+		@RenderTable()
+	}
+
+</body>
+</html>
+
+@helper RenderTable()
+{
+	<table class="table @TableStyle.Replace(",", " ")">
+		<thead>
+			<tr>
+				@for (var i = 0; i < Columns; i++)
+				{
+					<th>Column @(i + 1)</th>
+				}
+			</tr>
+		</thead>
+		<tbody>
+			@for (var i = 0; i < Rows; i++)
+			{
+				<tr>
+					@for (var j = 0; j < Columns; j++)
+					{
+						<td> </td>
+					}
+				</tr>
+			}
+		</tbody>
+	</table>
+}

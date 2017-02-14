@@ -1,0 +1,8 @@
+<f:function name="PageBlocks.Table" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
+		pal:title="Table"
+		pal:description="Insert table with specific style."
+		pal:tags="page blocks,tables"
+		pal:icon="table"
+		pal:container-anti-classes=""
+		pal:container-classes="">
+</f:function>

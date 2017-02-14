@@ -65,7 +65,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Package\App_Data\Components\Blockquote.xml" />
+    <Content Include="Package\App_Data\Components\Blockquote.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Package\App_Data\Components\ImageAndText.xml" />
     <Content Include="Package\App_Data\Components\LeadParagraph.xml" />
     <Content Include="Package\App_Data\Components\PageTitleAndLeadParagraph.xml" />
     <Content Include="Package\App_Data\Components\Table.xml" />
@@ -87,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Package\App_Data\Razor\PageBlocks\Table.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Package\App_Data\Razor\PageBlocks\ImageAndText.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

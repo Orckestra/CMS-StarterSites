@@ -1,0 +1,8 @@
+﻿<f:function name="PageBlocks.ImageAndText" xmlns:f="http://www.composite.net/ns/function/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:pal="http://www.composite.net/ns/components/1.0"
+		pal:title="Image and Text"
+		pal:description="Insert simple image and text layout."
+		pal:tags="page blocks"
+		pal:icon="image-left"
+		pal:container-anti-classes=""
+		pal:container-classes="">
+</f:function>

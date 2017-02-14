@@ -1,0 +1,41 @@
+﻿@using System.ComponentModel
+@inherits RazorFunction
+
+@functions {
+	public override string FunctionDescription
+	{
+		get { return "Simple Image and Text"; }
+	}
+
+	[FunctionParameter(Label = "Image")]
+	public DataReference<IImageFile> Image { get; set; }
+
+
+	[FunctionParameter(Label = "Text")]
+	public XhtmlDocument Text { get; set; }
+
+	private const string optionsMarkup = @"<f:widgetfunction xmlns:f=""http://www.composite.net/ns/function/1.0"" name=""Composite.Widgets.String.Selector"">
+		<f:param name=""Options"">
+			<f:function name=""Composite.Utils.String.Split"">
+				<f:param name=""String"" value=""Right-align the image"" />
+			</f:function>
+		</f:param>
+		<f:param name=""Required"" value=""False"" />
+		<f:param name=""Multiple"" value=""True"" />
+	</f:widgetfunction>";
+	[FunctionParameter(Label = "Options", Help = "By default the Image at the Left", DefaultValue="", WidgetMarkup = optionsMarkup)]
+	public string Options { get; set; }
+
+}
+@{
+	var ImageAtTheRight = Options.Contains("Right-align the image");
+}
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://www.composite.net/ns/function/1.0">
+<head>
+</head>
+<body>
+	<img src="~/media(@Image.Data.Id)?mw=400" alt="img" class="img-responsive @(ImageAtTheRight ? "pull-right": "pull-left") thumbnail" />
+	@Markup(Text)
+</body>
+</html>
+
