@@ -62,9 +62,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Package\Datas\Composite.Lists.Tabs.Groups_public.xml" />
-    <Content Include="Package\Datas\Composite.Lists.Tabs.Items_public.xml" />
-    <Content Include="Package\install.xml" />
+    <Content Include="Package\Datas\Orckestra.Lists.Tabs.Groups_public.xml" />
+    <Content Include="Package\Datas\Orckestra.Lists.Tabs.Items_public.xml" />
+    <Content Include="Package\install.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="_PackageCreator\Orckestra.Lists.Tabs.DefaultContent.xml" />
   </ItemGroup>
   <ItemGroup>

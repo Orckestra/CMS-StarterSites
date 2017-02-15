@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="4.2" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.Lists.Tabs.DefaultContent" groupName="Orckestra.Lists" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="32c46159-8f4d-4777-b5e8-b1af7780525f" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.Lists.Tabs.DefaultContent" groupName="Orckestra.Lists" version="2.0.1" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="32c46159-8f4d-4777-b5e8-b1af7780525f" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>
@@ -9,11 +9,11 @@
 	<mi:PackageFragmentInstallers>
 		<mi:Add installerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentInstaller, Composite" uninstallerType="Composite.Core.PackageSystem.PackageFragmentInstallers.DataPackageFragmentUninstaller, Composite">
 			<Types>
-				<Type type="Composite.Lists.Tabs.Group">
-					<Data dataScopeIdentifier="public" dataFilename="~\Datas\Composite.Lists.Tabs.Groups_public.xml" />
+				<Type type="Orckestra.Lists.Tabs.Group">
+					<Data dataScopeIdentifier="public" dataFilename="~\Datas\Orckestra.Lists.Tabs.Groups_public.xml" />
 				</Type>
-				<Type type="Composite.Lists.Tabs.Item">
-					<Data dataScopeIdentifier="public" locale="?" dataFilename="~\Datas\Composite.Lists.Tabs.Items_public.xml" />
+				<Type type="Orckestra.Lists.Tabs.Item">
+					<Data dataScopeIdentifier="public" locale="?" dataFilename="~\Datas\Orckestra.Lists.Tabs.Items_public.xml" />
 				</Type>
 			</Types>
 		</mi:Add>
