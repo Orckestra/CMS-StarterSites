@@ -5,7 +5,7 @@
 		<Add name="Composite.Lists.Tabs.Item" />
 	</pc:DynamicDataTypesData>
 	<mi:PackageRequirements minimumCompositeVersion="4.2" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.Lists.Tabs.DefaultContent" groupName="Orckestra.Lists" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="32c46159-8f4d-4777-b5e8-b1af7780525f" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.Lists.Tabs.DefaultContent" groupName="Orckestra.Lists" version="1.0.0" author="Orckestra" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="32c46159-8f4d-4777-b5e8-b1af7780525f" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>

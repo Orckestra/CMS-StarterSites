@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Core" groupName="Orckestra.StarterSite" version="2.0.2" author="Orckestra" website="https://cms.orckestra.com/" readMoreUrl="https://cms.orckestra.com/" id="cdd53142-6c0b-44dc-8648-562c24c23777" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Core" groupName="Orckestra.StarterSite" version="2.0.3" author="Orckestra A/S" website="https://c1.orckestra.com/" readMoreUrl="https://c1.orckestra.com/" id="cdd53142-6c0b-44dc-8648-562c24c23777" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>

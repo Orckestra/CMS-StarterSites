@@ -18,7 +18,7 @@
 		<Add name="a3055286-0e90-4b04-99dd-fb1a61dde0bf" root="false" data="true" />
 	</pc:PageTrees>
 	<mi:PackageRequirements minimumCompositeVersion="4.3.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Mercury.Content" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="0c532d79-673a-4557-ba84-c01b05895b47" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.StarterSite.Mercury.Content" groupName="Orckestra.StarterSite" version="2.0.1" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="0c532d79-673a-4557-ba84-c01b05895b47" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>

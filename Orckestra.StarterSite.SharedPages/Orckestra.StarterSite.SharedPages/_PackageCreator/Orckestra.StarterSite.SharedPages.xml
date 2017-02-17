@@ -13,7 +13,7 @@
 		<Add name="f90418c7-9654-4226-81c1-3b4e959f4f39" root="false" data="true" />
 	</pc:PageTrees>
 	<mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.SharedPages" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="6f078485-f7c3-40b2-8960-b075ccfaaaa3" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.StarterSite.SharedPages" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra A/S" website="https://c1.orckestra.com/" readMoreUrl="https://c1.orckestra.com/" id="6f078485-f7c3-40b2-8960-b075ccfaaaa3" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>Shared pages used on starter sites.
 Example: About Us, Getting started.</Description>
