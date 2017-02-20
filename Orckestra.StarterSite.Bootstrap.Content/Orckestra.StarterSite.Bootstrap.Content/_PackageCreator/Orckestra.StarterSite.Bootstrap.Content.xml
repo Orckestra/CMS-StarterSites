@@ -12,7 +12,7 @@
 		<Add name="DatatypesData" />
 	</pc:Content>
 	<mi:PackageRequirements minimumCompositeVersion="4.0.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Bootstrap.Content" groupName="Orckestra.StarterSite.Bootstrap" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com/" readMoreUrl="-" id="26489170-b5e4-4da0-ac98-c9e0835ea214" canBeUninstalled="false" systemLocking="none" flushOnCompletion="false">
+	<mi:PackageInformation name="Orckestra.StarterSite.Bootstrap.Content" groupName="Orckestra.StarterSite.Bootstrap" version="2.0.0" author="Orckestra" website="https://c1.orckestra.com/" readMoreUrl="-" id="26489170-b5e4-4da0-ac98-c9e0835ea214" canBeUninstalled="false" systemLocking="none" flushOnCompletion="false">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>-</Description>
 	</mi:PackageInformation>

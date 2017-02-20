@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
   <mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-  <mi:PackageInformation name="Orckestra.StarterSite.Venus.Core" groupName="Orckestra.StarterSite.Venus" version="2.0.9" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="65d06d1e-e810-49f4-98c8-4a336936f5cc" canBeUninstalled="false" systemLocking="hard" flushOnCompletion="true">
+  <mi:PackageInformation name="Orckestra.StarterSite.Venus.Core" groupName="Orckestra.StarterSite.Venus" version="2.1.0" author="Orckestra A/S" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="65d06d1e-e810-49f4-98c8-4a336936f5cc" canBeUninstalled="false" systemLocking="hard" flushOnCompletion="true">
     <TechnicalDetails>Venus Core</TechnicalDetails>
     <Description>Venus Core</Description>
   </mi:PackageInformation>

@@ -12,7 +12,7 @@
 		<Add name="a3055286-0e90-4b04-99dd-fb1a61dde0bf" root="false" data="true" />
 	</pc:PageTrees>
 	<mi:PackageRequirements minimumCompositeVersion="4.2.5352.24809" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Content" groupName="Orckestra.StarterSite" version="1.0.0" author="Orckestra" website="https://cms.orckestra.com" readMoreUrl="https://cms.orckestra.com" id="adb3958f-01f3-412a-9cdd-978becc19c20" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Content" groupName="Orckestra.StarterSite" version="1.0.0" author="Orckestra" website="https://c1.orckestra.com" readMoreUrl="https://c1.orckestra.com" id="adb3958f-01f3-412a-9cdd-978becc19c20" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>Starter site content</Description>
 	</mi:PackageInformation>
