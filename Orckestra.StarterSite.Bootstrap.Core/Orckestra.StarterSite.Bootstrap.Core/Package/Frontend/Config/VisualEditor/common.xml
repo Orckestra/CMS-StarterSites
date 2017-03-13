@@ -3,6 +3,7 @@
   <styles>
     <style file="styles/core.css" />
     <style file="../../styles/visualeditor.less" />
+		<style file="../../Orckestra/Web/Html/FontAwesome/css/font-awesome.css"/>
   </styles>
   <!--
 		These format-id's will overwrite or overload TinyMCE built-in formats:
