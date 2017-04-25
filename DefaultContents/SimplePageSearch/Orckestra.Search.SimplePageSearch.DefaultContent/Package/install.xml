@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
 	<mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.Search.SimplePageSearch.DefaultContent" groupName="Orckestra.Search.SimplePageSearch" version="1.0.0" author="Orckestra" website="https://csm.orckestra.com" readMoreUrl="https://csm.orckestra.com" id="3602f7a4-55bb-4173-b44c-f17e68ce1bf0" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageInformation name="Orckestra.Search.SimplePageSearch.DefaultContent" groupName="Orckestra.Search.SimplePageSearch" version="1.0.1" author="Orckestra" website="https://csm.orckestra.com" readMoreUrl="https://csm.orckestra.com" id="3602f7a4-55bb-4173-b44c-f17e68ce1bf0" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>Package can be installed on one of the Starter Sites (Open Cph, Venus, ...)</TechnicalDetails>
 		<Description>Package installs Search Page and inserts "NavbarSearchForm" function call into the "Service Menu" template feature.</Description>
 	</mi:PackageInformation>
