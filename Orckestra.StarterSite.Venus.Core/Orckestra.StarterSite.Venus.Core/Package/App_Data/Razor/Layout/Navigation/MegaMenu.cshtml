@@ -1,7 +1,8 @@
-﻿@inherits RazorFunction
+﻿@using Composite.Core.WebClient.Renderings.Page
+@inherits RazorFunction
 
 @functions {
-    override public string FunctionDescription
+    public override string FunctionDescription
     {
         get { return "A function that displays a main menu"; }
     }
@@ -14,9 +15,9 @@
                        DefaultValue = true)]
     public bool ExpandOnHover { get; set; }
 
+    private Guid CurrentPageId { get { return PageRenderer.CurrentPageId; } }
 
-
-    private IEnumerable<PageNode> OpenPages(PageNode selectedPageNode)
+    private List<PageNode> OpenPages(PageNode selectedPageNode)
     {
         var openPages = new List<PageNode>();
         var openPage = selectedPageNode;
@@ -31,8 +32,14 @@
     }
 }
 @{
-    var pagenodes = Sitemap.CurrentHomePageNode.GetPageNodes(SitemapScope.Level2AndSiblings).ToList();
+    var pagenodes = Sitemap.CurrentHomePageNode
+        .GetPageNodes(SitemapScope.Level2AndSiblings)
+        .Where(page => !string.IsNullOrEmpty(page.MenuTitle))
+        .ToList();
+
     if (!pagenodes.Any()) { return; }
+
+    var openPages = OpenPages(CurrentPageNode);
 }
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -41,73 +48,70 @@
     <ul class="nav navbar-nav mega-menu @(ExpandOnHover ? "mega-menu-expandonhover" : "")">
         @if (ShowHomePage)
         {
-        <li>
-            <a href="@HomePageNode.Url">@HomePageNode.MenuTitle</a>
-        </li>}
+            <li>
+                <a href="@HomePageNode.Url">@HomePageNode.MenuTitle</a>
+            </li>
+        }
+
         @foreach (var page in pagenodes)
         {
+            var childPages = page.ChildPages.Where(cp => !string.IsNullOrEmpty(cp.MenuTitle)).ToList();
 
-            if (!string.IsNullOrEmpty(page.MenuTitle))
-            {
-                var isDropDown = page.ChildPages.Any(cp => !string.IsNullOrEmpty(cp.MenuTitle));
-                var isActive = page.Id == CurrentPageNode.Id;
-                var isOpen = OpenPages(CurrentPageNode).Any(op => op.Id == page.Id);
-                <li class="@(isDropDown ? "dropdown" : string.Empty)">
-                    <a href="@page.Url" class="@(isDropDown ? "dropdown-toggle" : string.Empty)" data-toggle="@(isDropDown ? "dropdown" : null)">
-                        @page.MenuTitle
-                        @if (isDropDown)
-                        {
-                            <b class="caret"></b>
-                        }
-                    </a>
+            var isDropDown = childPages.Count > 0;
+
+            <li class="@(isDropDown ? "dropdown" : null)">
+                <a href="@page.Url" class="@(isDropDown ? "dropdown-toggle" : null)" data-toggle="@(isDropDown ? "dropdown" : null)">
+                    @page.MenuTitle
                     @if (isDropDown)
                     {
-                        <div class="dropdown-menu mega-dropdown-menu ">
-                            <div class="mega-menu-headline">
-                                <a href="@page.Url" title="@page.Title">
-                                    @page.Title
-                                </a>
-                                @if (!string.IsNullOrWhiteSpace(page.Description))
-                                {
-                                    <div class="description">@page.Description</div>
-                                }
-                            </div>
-                            @NavigationTree(page, 10)
-                        </div>
+                        <b class="caret"></b>
                     }
-                </li>
-            }
+                </a>
+                @if (isDropDown)
+                {
+                    <div class="dropdown-menu mega-dropdown-menu ">
+                        <div class="mega-menu-headline">
+                            <a href="@page.Url" title="@page.Title">
+                                @page.Title
+                            </a>
+                            @if (!string.IsNullOrWhiteSpace(page.Description))
+                            {
+                                <div class="description">@page.Description</div>
+                            }
+                        </div>
+                        @NavigationTree(childPages, 2, 10, openPages)
+                    </div>
+                }
+            </li>
         }
     </ul>
 </body>
 </html>
 
-@helper NavigationTree(PageNode parentPage, int maxLevel)
+@helper NavigationTree(List<PageNode> pages, int pageLevel, int maxLevel, List<PageNode> openPages)
 {
-    var pages = parentPage.ChildPages;
+    if (pages.Count == 0)
+    {
+        return;
+    }
 
-    var isOpen = OpenPages(@CurrentPageNode).Any(op => op.Id == parentPage.Id);
-    var isSelected = @CurrentPageNode.Id == parentPage.Id;
-    var pageLevel = parentPage.Level;
-    <ul class="nav level-@(pageLevel)">
-        @if (pages.Any())
+    <ul class="nav level-@pageLevel">
+        @foreach (var subPage in pages)
         {
-            foreach (var subPage in pages)
-            {
-                if (!String.IsNullOrWhiteSpace(subPage.MenuTitle))
+            bool isOpen = openPages.Any(op => op.Id == subPage.Id);
+            bool isSelected = CurrentPageId == subPage.Id;
+
+            var childPages = subPage.ChildPages.Where(p => !string.IsNullOrEmpty(p.MenuTitle)).ToList();
+
+            var hasChildren = childPages.Count > 0;
+
+            <li class="@(isOpen ? "open" : null) @(isSelected ? "active" : null) @(hasChildren ? "has-childs" : null)">
+                <a href="@subPage.Url">@subPage.MenuTitle</a>
+                @if (pageLevel < maxLevel && (isOpen || pageLevel == 2))
                 {
-                    isOpen = OpenPages(@CurrentPageNode).Any(op => op.Id == subPage.Id);
-                    isSelected = @CurrentPageNode.Id == subPage.Id;
-                    var isHasChilds = subPage.ChildPages.Any(p => !string.IsNullOrEmpty(p.MenuTitle));
-                    <li class="@(isOpen ? "open" : string.Empty)@(isSelected ? " active" : string.Empty)@(isHasChilds ? " has-childs" : string.Empty)">
-                        <a href="@(subPage.Url)">@subPage.MenuTitle</a>
-                        @if (pageLevel < maxLevel && (isOpen || pageLevel == 2))
-                        {
-                            @NavigationTree(subPage, maxLevel);
-                        }
-                    </li>
+                    @NavigationTree(childPages, pageLevel + 1, maxLevel, openPages)
                 }
-            }
+            </li>
         }
     </ul>
 }
