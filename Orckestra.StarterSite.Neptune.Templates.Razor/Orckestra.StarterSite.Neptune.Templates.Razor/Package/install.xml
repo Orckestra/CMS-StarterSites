@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <mi:PackageInstaller xmlns:mi="http://www.composite.net/ns/management/packageinstaller/1.0">
-	<mi:PackageRequirements minimumCompositeVersion="4.2.0.0" maximumCompositeVersion="9.9999.9999.9999" />
-	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Templates.Razor" groupName="Orckestra.StarterSite" version="2.0.0" author="Orckestra" website="https://cms.orckestra.com/" readMoreUrl="https://cms.orckestra.com/" id="7f48c4e9-68c7-40c2-9feb-75a30bb57740" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
+	<mi:PackageRequirements minimumCompositeVersion="6.8" maximumCompositeVersion="9.9999.9999.9999" />
+	<mi:PackageInformation name="Orckestra.StarterSite.Neptune.Templates.Razor" groupName="Orckestra.StarterSite" version="2.1.0" author="Orckestra" website="https://cms.orckestra.com/" readMoreUrl="https://cms.orckestra.com/" id="7f48c4e9-68c7-40c2-9feb-75a30bb57740" canBeUninstalled="true" systemLocking="hard" flushOnCompletion="true">
 		<TechnicalDetails>-</TechnicalDetails>
 		<Description>Starter site templates</Description>
 	</mi:PackageInformation>
