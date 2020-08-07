@@ -1,55 +1,55 @@
 ﻿@inherits CompositeC1WebPage
 @{
-    string websiteTitle = HomePageNode.Title;
+	string websiteTitle = HomePageNode.Title;
 }
 <!DOCTYPE html>
-        <html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="@Lang">
-        <head>
-            <title>@CurrentPageNode.Title</title>
-            @if (!string.IsNullOrEmpty(CurrentPageNode.Description))
-            {
-                <meta name="description" content="@CurrentPageNode.Description" />
-            }
-            @PageTemplateFeature("Descriptive HTML head elements")
-        </head>
-        <body>
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="@Lang">
+<head>
+	<title>@CurrentPageNode.Title</title>
+	@if (!string.IsNullOrEmpty(CurrentPageNode.Description))
+	{
+		<meta name="description" content="@CurrentPageNode.Description" />
+	}
+	@PageTemplateFeature("Descriptive HTML head elements")
+</head>
+<body>
 
-            <div class="main-nav">
-                <a class="main-nav-close" data-toggle="main-nav"><span class="icon fa fa-times" title="x"></span></a>
-                @PageTemplateFeature("Main Navigation")
-            </div>
-            <div class="page-canvas">
-                <div class="navbar navbar-default navbar-fixed-top">
-                    <div class="navbar-inner-wrapper">
-                        <div class="navbar-header">
-                            <button class="navbar-toggle" type="button" data-toggle="main-nav">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a href="@HomePageNode.Url" class="navbar-brand" title="@websiteTitle"><img class="logo" src="/Frontend/Images/logo.png" alt="logo" /></a>
-                            <div class="navbar-breadcrumbs hidden-xs">
-                                @PageTemplateFeature("Breadcrumbs Navigation")
-                            </div>
-                            <div class="service-nav">
-                                @PageTemplateFeature("Service Menu")
-                            </div>
-                        </div>
-                    </div>
-                </div>
+	<div class="main-nav">
+		<a class="main-nav-close" data-toggle="main-nav"><span class="icon fa fa-times" title="x"></span></a>
+		@PageTemplateFeature("Main Navigation")
+	</div>
+	<div class="page-canvas">
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-inner-wrapper">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="main-nav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="@HomePageNode.Url" class="navbar-brand" title="@websiteTitle"><img class="logo" src="/Frontend/Images/logo.png" alt="logo" /></a>
+					<div class="navbar-breadcrumbs hidden-xs">
+						@PageTemplateFeature("Breadcrumbs Navigation")
+					</div>
+					<div class="service-nav">
+						@PageTemplateFeature("Service Menu")
+					</div>
+				</div>
+			</div>
+		</div>
 
-                <div class="page-content">
-                    <div class="container-fluid page-content-container">
-                        @RenderBody()
-                        @PageTemplateFeature("Content Footer")
-                    </div>
-                </div>
+		<div class="page-content">
+			<div class="container-fluid page-content-container">
+				@RenderBody()
+				@PageTemplateFeature("Content Footer")
+			</div>
+		</div>
 
-                <footer class="page-footer">
-                    <div class="container">
-                        @PageTemplateFeature("Page Footer")
-                    </div>
-                </footer>
-            </div>
-        </body>
-    </html>
+		<footer class="page-footer">
+			<div class="container">
+				@PageTemplateFeature("Page Footer")
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

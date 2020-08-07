@@ -1,86 +1,86 @@
 ﻿@inherits CompositeC1WebPage
 @{
-    var websiteTitle = HomePageNode.Title;
+	var websiteTitle = HomePageNode.Title;
 }
 <!DOCTYPE html>
-        <html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="@Lang">
-        <head>
-            <title>@CurrentPageNode.Title</title>
-            @if (!string.IsNullOrEmpty(CurrentPageNode.Description))
-            {
-                <meta name="description" content="@CurrentPageNode.Description" />
-            }
-            @PageTemplateFeature("Descriptive HTML head elements")
-        </head>
-        <body>
-            <div class="scroll-top"><i class="fa fa-chevron-up"></i></div>
-            <div class="page-wrapper">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="@Lang">
+<head>
+	<title>@CurrentPageNode.Title</title>
+	@if (!string.IsNullOrEmpty(CurrentPageNode.Description))
+	{
+		<meta name="description" content="@CurrentPageNode.Description" />
+	}
+	@PageTemplateFeature("Descriptive HTML head elements")
+</head>
+<body>
+	<div class="scroll-top"><i class="fa fa-chevron-up"></i></div>
+	<div class="page-wrapper">
 
-                <div class="header-top">
-                    <div class="container container-sm-p0">
-                        <div class="row">
-                            <div class="col-xs-2 col-sm-8">
-                                @PageTemplateFeature("Header Top")
-                            </div>
-                            <div class="col-xs-10 col-sm-4">
-                                <div class="service-menu">
-                                    @PageTemplateFeature("Service Menu")
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+		<div class="header-top">
+			<div class="container container-sm-p0">
+				<div class="row">
+					<div class="col-xs-2 col-sm-8">
+						@PageTemplateFeature("Header Top")
+					</div>
+					<div class="col-xs-10 col-sm-4">
+						<div class="service-menu">
+							@PageTemplateFeature("Service Menu")
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                <nav class="navbar navbar-default">
-                    <div class="container">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mainnav">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            @PageTemplateFeature("Header Logo")
-                        </div>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mainnav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					@PageTemplateFeature("Header Logo")
+				</div>
 
-                        <div class="collapse navbar-collapse" id="navbar-mainnav">
-                            <div class="main-navigation animated">
-                                @PageTemplateFeature("Main Navigation")
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+				<div class="collapse navbar-collapse" id="navbar-mainnav">
+					<div class="main-navigation animated">
+						@PageTemplateFeature("Main Navigation")
+					</div>
+				</div>
+			</div>
+		</nav>
 
-                <div class="page-main">
-                    @RenderBody()
-                </div>
+		<div class="page-main">
+			@RenderBody()
+		</div>
 
-                <footer class="page-footer">
-                    <div class="footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    @PageTemplateFeature("Page Footer Column 1")
-                                </div>
-                                <div class="col-md-4">
-                                    @PageTemplateFeature("Page Footer Column 2")
-                                </div>
-                                <div class="col-md-4">
-                                    @PageTemplateFeature("Page Footer Column 3")
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="subfooter">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    @PageTemplateFeature("Page Footer")
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </body>
-    </html>
+		<footer class="page-footer">
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							@PageTemplateFeature("Page Footer Column 1")
+						</div>
+						<div class="col-md-4">
+							@PageTemplateFeature("Page Footer Column 2")
+						</div>
+						<div class="col-md-4">
+							@PageTemplateFeature("Page Footer Column 3")
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							@PageTemplateFeature("Page Footer")
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
